@@ -6,6 +6,7 @@ import (
 	"errors"
 	"os"
 	"path/filepath"
+	"runtime"
 	"slices"
 	"strings"
 	"sync"
@@ -970,8 +971,10 @@ func TestScreenshot(t *testing.T) {
 		got, err := os.ReadFile(path)
 		require.NoError(t, err)
 		assert.Equal(t, png, got)
-		info, _ := os.Stat(path)
-		assert.Zero(t, info.Mode().Perm()&0o077, "a screenshot can show what was typed; it is private")
+		if runtime.GOOS != "windows" { // Windows has no owner/group/other bits to check; it uses ACLs instead
+			info, _ := os.Stat(path)
+			assert.Zero(t, info.Mode().Perm()&0o077, "a screenshot can show what was typed; it is private")
+		}
 		assert.Equal(t, "png", p.called("take_screenshot")[0].args["format"])
 		assert.NotContains(t, p.called("take_screenshot")[0].args, "filePath", "the picture comes back inline, so the browser needs no access to the disk")
 	})

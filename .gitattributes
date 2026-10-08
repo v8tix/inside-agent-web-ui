@@ -1,0 +1,5 @@
+# Every tracked file in this repo is text (no images, fonts or other binaries).
+# A checkout on Windows would otherwise turn LF into CRLF, which breaks code that
+# matches a line ending literally: the "// include:<name>" sentinel in
+# scripts.go, and the "[isError]\n" prefix the devtools test fixtures use.
+* text=auto eol=lf
