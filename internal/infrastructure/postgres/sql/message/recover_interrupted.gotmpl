@@ -1,0 +1,2 @@
+UPDATE messages SET status = 'failed', error = $2, updated_at = now()
+WHERE status = 'streaming' AND updated_at < now() - make_interval(secs => $1)

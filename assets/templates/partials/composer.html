@@ -1,0 +1,13 @@
+{{define "partial:composer"}}
+<form id="composer" class="composer" method="post"
+      {{if .Active}}action="/c/{{.Active.ID}}/messages" hx-post="/c/{{.Active.ID}}/messages" hx-target="#messages" hx-swap="beforeend" hx-sync="this:drop"{{else}}action="/c" hx-boost="true"{{end}}>
+  <div id="composer-error" class="text-danger-emphasis small mb-1" role="alert" data-testid="composer-error">{{.Error}}</div>
+  <div class="composer-row">
+    <label for="composer-input" class="visually-hidden">Message</label>
+    <textarea id="composer-input" name="content" class="form-control" rows="1"
+              placeholder="Message the agent" required autofocus data-testid="composer-input">{{.Draft}}</textarea>
+    <button type="submit" class="btn btn-primary" data-testid="send" aria-label="Send message">Send</button>
+    <button type="button" class="btn btn-outline-secondary" data-testid="stop" aria-label="Stop generating" hidden>Stop</button>
+  </div>
+</form>
+{{end}}

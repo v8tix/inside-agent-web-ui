@@ -1,0 +1,50 @@
+data: {"id":"073a3fe8-d944-46e9-aed4-3eeaabd3ec79","invocationId":"e-78095eb5-e3bb-41c3-9929-f2fa6a9715cb","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"# "}]}}
+
+data: {"id":"c23f260f-a1fb-43e7-8c79-510e40ced2d2","invocationId":"e-78095eb5-e3bb-41c3-9929-f2fa6a9715cb","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"Report\n\nHere "}]}}
+
+data: {"id":"a1da7d75-d468-4400-854c-e04085e78890","invocationId":"e-78095eb5-e3bb-41c3-9929-f2fa6a9715cb","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"is "}]}}
+
+data: {"id":"233f917f-8e05-4719-ba69-74bd96f01aba","invocationId":"e-78095eb5-e3bb-41c3-9929-f2fa6a9715cb","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"a "}]}}
+
+data: {"id":"0cd14c24-2235-4b65-81e8-4e85a2797978","invocationId":"e-78095eb5-e3bb-41c3-9929-f2fa6a9715cb","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"**bold** "}]}}
+
+data: {"id":"16304802-16bd-44b7-9576-e946bacbc626","invocationId":"e-78095eb5-e3bb-41c3-9929-f2fa6a9715cb","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"claim, "}]}}
+
+data: {"id":"be99bba8-28ab-4343-bd6b-40dfe5a124e7","invocationId":"e-78095eb5-e3bb-41c3-9929-f2fa6a9715cb","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"some "}]}}
+
+data: {"id":"cc353546-1a4b-4a20-9754-d48123925973","invocationId":"e-78095eb5-e3bb-41c3-9929-f2fa6a9715cb","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"`inline "}]}}
+
+data: {"id":"ea256ae3-70f4-4c32-b8de-46de17646816","invocationId":"e-78095eb5-e3bb-41c3-9929-f2fa6a9715cb","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"code`, "}]}}
+
+data: {"id":"23d47271-2dae-44a0-8294-2e9fe4d1ba29","invocationId":"e-78095eb5-e3bb-41c3-9929-f2fa6a9715cb","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"and "}]}}
+
+data: {"id":"05deb680-b46a-42b0-8597-435a5570ee7b","invocationId":"e-78095eb5-e3bb-41c3-9929-f2fa6a9715cb","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"a "}]}}
+
+data: {"id":"e72afa85-6f81-40e5-8901-023bad7823ad","invocationId":"e-78095eb5-e3bb-41c3-9929-f2fa6a9715cb","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"[link](https://example.com).\n\n- "}]}}
+
+data: {"id":"c4b5cddc-2947-4640-92cf-95724b678017","invocationId":"e-78095eb5-e3bb-41c3-9929-f2fa6a9715cb","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"first "}]}}
+
+data: {"id":"6ec8aa88-80f0-48fb-86b1-a12f27167db4","invocationId":"e-78095eb5-e3bb-41c3-9929-f2fa6a9715cb","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"item\n- "}]}}
+
+data: {"id":"c5986d4c-be46-43c8-bd03-09e3c4566ef5","invocationId":"e-78095eb5-e3bb-41c3-9929-f2fa6a9715cb","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"second "}]}}
+
+data: {"id":"c0943c54-a0e1-4fa3-8eb9-4342f85198a6","invocationId":"e-78095eb5-e3bb-41c3-9929-f2fa6a9715cb","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"item\n\n| "}]}}
+
+data: {"id":"f921521d-c26d-4399-889e-8f1b4016f06d","invocationId":"e-78095eb5-e3bb-41c3-9929-f2fa6a9715cb","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"Name "}]}}
+
+data: {"id":"8e4fea22-5ce9-4d7d-bb0c-d1d88107b993","invocationId":"e-78095eb5-e3bb-41c3-9929-f2fa6a9715cb","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"| "}]}}
+
+data: {"id":"156d60a3-f805-4f8a-b06a-5de520613522","invocationId":"e-78095eb5-e3bb-41c3-9929-f2fa6a9715cb","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"Value "}]}}
+
+data: {"id":"a4da54c5-b475-4469-b479-75f6e76260b9","invocationId":"e-78095eb5-e3bb-41c3-9929-f2fa6a9715cb","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"|\n|------|-------|\n| "}]}}
+
+data: {"id":"16f1bc5e-5a53-4e19-8625-8997666c9c1c","invocationId":"e-78095eb5-e3bb-41c3-9929-f2fa6a9715cb","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"alpha "}]}}
+
+data: {"id":"d70450b5-c768-41ac-8e3f-50a603a916e9","invocationId":"e-78095eb5-e3bb-41c3-9929-f2fa6a9715cb","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"| "}]}}
+
+data: {"id":"98d21388-6971-406c-86f9-bb8a01fe158c","invocationId":"e-78095eb5-e3bb-41c3-9929-f2fa6a9715cb","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"1 "}]}}
+
+data: {"id":"6e4cac6c-4515-4ac0-8f1d-b64855ad0022","invocationId":"e-78095eb5-e3bb-41c3-9929-f2fa6a9715cb","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"|\n\n```go\nfmt.Println(\"hello\")\n```\n"}]}}
+
+data: {"id":"40efa824-c55c-4a63-80a4-168c5ffe6b92","invocationId":"e-78095eb5-e3bb-41c3-9929-f2fa6a9715cb","author":"ui_agent","groundingMetadata":null,"usageMetadata":{"candidatesTokenCount":33,"promptTokenCount":1,"totalTokenCount":34},"turnComplete":true,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"# Report\n\nHere is a **bold** claim, some `inline code`, and a [link](https://example.com).\n\n- first item\n- second item\n\n| Name | Value |\n|------|-------|\n| alpha | 1 |\n\n```go\nfmt.Println(\"hello\")\n```\n"}]}}
+

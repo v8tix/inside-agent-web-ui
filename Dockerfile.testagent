@@ -1,0 +1,21 @@
+# syntax=docker/dockerfile:1
+# Scripted ADK test agent: the real ADK REST API around a scripted model.
+# Build from the repository root:  docker build -f Dockerfile.testagent -t agent-web-ui-testagent .
+
+FROM golang:1.27.1-alpine AS build
+WORKDIR /src
+COPY go.mod go.sum ./
+RUN go mod download
+COPY . .
+RUN CGO_ENABLED=0 go build -trimpath -ldflags="-s -w" -o /out/test-agent ./cmd/test-agent
+
+FROM gcr.io/distroless/static-debian13:nonroot
+COPY --from=build /out/test-agent /test-agent
+USER nonroot:nonroot
+EXPOSE 9093
+# Distroless has no curl; the binary checks itself: ["/test-agent", "healthcheck"].
+# The ADK launcher listens on 127.0.0.1 unless told otherwise, which no other
+# container could reach. Inside the container it listens on every interface;
+# Compose publishes the port on the host's 127.0.0.1 only.
+ENTRYPOINT ["/test-agent"]
+CMD ["web", "--host=0.0.0.0", "--port=9093", "api"]

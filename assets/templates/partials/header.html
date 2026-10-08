@@ -1,0 +1,20 @@
+{{define "partial:header"}}
+<header class="navbar flex-nowrap border-bottom px-3">
+  {{if .User}}
+  <button type="button" class="btn btn-sm btn-outline-secondary d-lg-none me-2" data-bs-toggle="offcanvas" data-bs-target="#sidebar"
+          aria-controls="sidebar" aria-label="Open conversations" data-testid="sidebar-toggle">{{template "icon:menu"}}</button>
+  {{end}}
+  <a class="navbar-brand" href="/">Agent Web UI</a>
+  <div class="ms-auto d-flex align-items-center gap-2">
+    <button type="button" class="btn btn-sm btn-outline-secondary" data-testid="theme-toggle" aria-label="Theme">
+      {{template "icon:auto"}}{{template "icon:sun"}}{{template "icon:moon"}}
+    </button>
+    {{with .User}}
+    <form method="post" action="/logout" class="d-flex align-items-center gap-2 mb-0">
+      <span class="text-body-secondary small d-none d-sm-inline" data-testid="current-user">{{.Email}}</span>
+      <button type="submit" class="btn btn-sm btn-outline-secondary" data-testid="logout">Sign out</button>
+    </form>
+    {{end}}
+  </div>
+</header>
+{{end}}

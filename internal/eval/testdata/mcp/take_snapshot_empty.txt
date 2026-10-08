@@ -1,0 +1,10 @@
+## Latest page snapshot
+uid=1_0 RootWebArea "Fake chat" url="http://127.0.0.1:51008/"
+  uid=1_1 banner
+    uid=1_2 link "New chat" url="http://127.0.0.1:51008/#"
+      uid=1_3 StaticText "New chat"
+  uid=1_4 main
+    uid=1_5 region "Conversation"
+    uid=1_6 form
+      uid=1_7 textbox "Message" multiline
+      uid=1_8 button "Send message"

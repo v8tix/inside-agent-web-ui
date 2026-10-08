@@ -1,0 +1,14 @@
+data: {"id":"11a0f49a-59fe-488b-a139-604c360b6a7d","invocationId":"e-dffec30c-5011-4556-a94e-22f1bba1c73f","author":"ui_agent","groundingMetadata":null,"usageMetadata":null,"turnComplete":true,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"functionCall":{"id":"adk-7bd68e9c-7e4b-4018-9378-3dbcf980ab6f","name":"lookup","args":{"query":"#tool find the answer"}}}]}}
+
+data: {"id":"eb37494e-84cc-4c62-8a99-112211cc09d3","invocationId":"e-dffec30c-5011-4556-a94e-22f1bba1c73f","author":"ui_agent","groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"user","parts":[{"functionResponse":{"id":"adk-7bd68e9c-7e4b-4018-9378-3dbcf980ab6f","name":"lookup","response":{"result":"forty-two"}}}]}}
+
+data: {"id":"bf4214a8-05ea-411c-b77e-a94577280d15","invocationId":"e-dffec30c-5011-4556-a94e-22f1bba1c73f","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"The "}]}}
+
+data: {"id":"09e23e98-a541-425a-be4e-b4f1bd62e1b5","invocationId":"e-dffec30c-5011-4556-a94e-22f1bba1c73f","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"lookup "}]}}
+
+data: {"id":"e9ab2cf9-52c1-431f-93eb-56a1e0d14382","invocationId":"e-dffec30c-5011-4556-a94e-22f1bba1c73f","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"returned: "}]}}
+
+data: {"id":"cae67ced-12c3-4551-827b-f514f3bea4f4","invocationId":"e-dffec30c-5011-4556-a94e-22f1bba1c73f","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"forty-two"}]}}
+
+data: {"id":"5c77f32d-1fa8-4a71-950d-dc26204c18ba","invocationId":"e-dffec30c-5011-4556-a94e-22f1bba1c73f","author":"ui_agent","groundingMetadata":null,"usageMetadata":{"candidatesTokenCount":4,"promptTokenCount":4,"totalTokenCount":8},"turnComplete":true,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"The lookup returned: forty-two"}]}}
+

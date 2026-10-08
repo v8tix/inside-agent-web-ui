@@ -1,0 +1,5 @@
+## Network requests
+Showing 1-3 of 3 (Page 1 of 1).
+reqid=1 GET http://127.0.0.1:51008/ [200]
+reqid=2 GET http://127.0.0.1:51008/favicon.ico [404]
+reqid=3 GET http://127.0.0.1:51008/missing [404]

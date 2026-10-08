@@ -1,0 +1,12 @@
+# Keep secrets, local tools, data and scratch out of every build context.
+.git
+.idea
+**/.env*
+**/*.env
+!.env.example
+bin
+logs
+results
+datasets
+temp
+**/*.test

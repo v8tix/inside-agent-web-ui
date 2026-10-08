@@ -1,0 +1,95 @@
+# The checks a change has to pass before anyone reviews it. Each job runs a script a
+# developer can run too, so CI and a laptop cannot drift apart:
+#   gate          scripts/check.sh      formatting, vet, linters, vulnerabilities, unit tests, coverage
+#   windows       go build/vet/test     the same build, vet and the devtools package's tests, on a real
+#                                        Windows runner: this project has no Windows machine to test on
+#                                        otherwise, and the gate above only ever runs on Linux
+#   secrets       gitleaks              no secret anywhere in the history (values are redacted in the log)
+#   pull-request  scripts/pr-check.sh   the title and the size
+# The gate also runs the tests under it/ that need no Docker. The others need Docker, Node
+# and Chrome and run on a developer's machine: scripts/check.sh --it
+name: ci
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  gate:
+    name: Quality gate
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-go@v7
+        with:
+          go-version-file: go.mod
+      - name: Restore the quality tools
+        id: tools
+        uses: actions/cache@v6
+        with:
+          path: bin/tools
+          key: tools-${{ runner.os }}-${{ hashFiles('scripts/build-tools.sh', 'go.mod') }}
+      - name: Build the quality tools
+        if: steps.tools.outputs.cache-hit != 'true'
+        run: scripts/build-tools.sh golangci-lint staticcheck govulncheck modernize
+      - name: Run the gate
+        run: scripts/check.sh
+
+  windows:
+    name: Windows build
+    runs-on: windows-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-go@v7
+        with:
+          go-version-file: go.mod
+      - name: Build
+        run: go build ./...
+      - name: Vet
+        run: go vet ./...
+      - name: Test the process-handling code this platform actually owns
+        run: go test ./internal/eval/infrastructure/devtools/...
+
+  secrets:
+    name: Secret scan
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-go@v7
+        with:
+          go-version-file: go.mod
+      - name: Scan the history
+        run: |
+          go install github.com/zricethezav/gitleaks/v8@v8.30.1
+          "$(go env GOPATH)/bin/gitleaks" git --redact --no-banner .
+
+  pull-request:
+    name: Title and size
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+      - name: Check the title and the size
+        env:
+          # Through the environment, never pasted into the script: a title is whatever
+          # its author typed.
+          TITLE: ${{ github.event.pull_request.title }}
+          BASE: ${{ github.base_ref }}
+        run: scripts/pr-check.sh --base "origin/$BASE" --title "$TITLE"

@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "statuses": {
+    "correct": 8,
+    "incorrect": 1,
+    "no_final_answer": 1,
+    "agent_error": 1,
+    "timeout": 1,
+    "ui_error": 0,
+    "skipped": 1
+  },
+  "eligible": 13,
+  "attempted": 12,
+  "correct": 8,
+  "levels": [
+    {
+      "level": 1,
+      "eligible": 5,
+      "attempted": 4,
+      "correct": 3
+    },
+    {
+      "level": 2,
+      "eligible": 5,
+      "attempted": 5,
+      "correct": 3
+    },
+    {
+      "level": 3,
+      "eligible": 3,
+      "attempted": 3,
+      "correct": 2
+    }
+  ],
+  "format_compliance": {
+    "successes": 9,
+    "total": 10
+  },
+  "tool_calls": 1
+}

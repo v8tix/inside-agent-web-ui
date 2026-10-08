@@ -1,0 +1,13 @@
+{"task_id": "syn-l1-01", "level": 1, "question": "What is 6 times 7? [syn-l1-01]", "truth": "42"}
+{"task_id": "syn-l1-02", "level": 1, "question": "The label on a lamp says it costs one thousand dollars. What is its price, in dollars? [syn-l1-02]", "truth": "1000"}
+{"task_id": "syn-l1-03", "level": 1, "question": "Which city is the capital of France? [syn-l1-03]", "truth": "Paris"}
+{"task_id": "syn-l1-04", "level": 1, "question": "Which city is the capital of Germany? [syn-l1-04]", "truth": "Berlin"}
+{"task_id": "syn-l1-05", "level": 1, "question": "Using the attached spreadsheet, what is the total of column B? [syn-l1-05]", "truth": "15", "file_name": "totals.xlsx"}
+{"task_id": "syn-l2-01", "level": 2, "question": "Name the three primary colors of light in alphabetical order, separated by semicolons. [syn-l2-01]", "truth": "blue; green; red"}
+{"task_id": "syn-l2-02", "level": 2, "question": "Give the first three positive whole numbers, separated by commas. [syn-l2-02]", "truth": "1,2,3"}
+{"task_id": "syn-l2-03", "level": 2, "question": "Name the largest planet of the solar system. [syn-l2-03]", "truth": "Jupiter"}
+{"task_id": "syn-l2-04", "level": 2, "question": "At what temperature, in degrees Celsius, does water boil at sea level? [syn-l2-04]", "truth": "100"}
+{"task_id": "syn-l2-05", "level": 2, "question": "Look up the answer to everything and report it as a number. [syn-l2-05]", "truth": "42"}
+{"task_id": "syn-l3-01", "level": 3, "question": "Count the letters of the longest word in the sentence that you are about to be given, then double the count. [syn-l3-01]", "truth": "20"}
+{"task_id": "syn-l3-02", "level": 3, "question": "Write a short history of the number zero, and end with how many digits the decimal system uses. [syn-l3-02]", "truth": "10"}
+{"task_id": "syn-l3-03", "level": 3, "question": "What is pi, rounded to two decimal places? Show a small program that prints it. [syn-l3-03]", "truth": "3.14"}

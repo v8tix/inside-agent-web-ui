@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "replies": {
+    "syn-l1-01": {
+      "text": "Six times seven is forty-two.\nFINAL ANSWER: 42"
+    },
+    "syn-l1-02": {
+      "text": "The label says one thousand dollars.\nFINAL ANSWER: $1,000"
+    },
+    "syn-l1-03": {
+      "text": "France's capital is a well-known city on the Seine.\nFINAL ANSWER: paris"
+    },
+    "syn-l1-04": {
+      "text": "Germany's capital is in the south, I think.\nFINAL ANSWER: Munich"
+    },
+    "syn-l2-01": {
+      "text": "Light mixes from three primaries.\nFINAL ANSWER: Blue;Green;Red"
+    },
+    "syn-l2-02": {
+      "text": "Counting from one.\nFINAL ANSWER: 1, 2, 3"
+    },
+    "syn-l2-03": {
+      "text": "I believe the largest planet is Jupiter."
+    },
+    "syn-l2-04": {
+      "error": "the model service is unavailable"
+    },
+    "syn-l2-05": {
+      "text": "The lookup says forty-two.\nFINAL ANSWER: 42",
+      "tool": "lookup"
+    },
+    "syn-l3-01": {
+      "text": "I counted slowly.\nFINAL ANSWER: 20",
+      "first_delay_ms": 600000
+    },
+    "syn-l3-02": {
+      "text": "# A short history of zero\n\nZero did not arrive all at once. For thousands of years people counted without it, and the empty place in a written number was simply left blank or marked with a space.\n\n## Where it began\n\n- Babylonian scribes used a mark to show an empty place inside a number, but not at its end.\n- Maya astronomers wrote a shell-shaped sign for nothing in their long counts of days.\n- In India, mathematicians treated zero as a number of its own, with rules for adding and multiplying it.\n\n## How it travelled\n\nIndian texts reached the scholars of Baghdad, who wrote clear rules for arithmetic with the new digits. Merchants and travellers carried the system along trade routes to the Mediterranean, and from there it entered the schools of Europe, where it slowly replaced the older numerals.\n\n## Why it matters\n\nWithout a sign for an empty place, 205 and 25 cannot be told apart. With it, a handful of symbols can write any whole number, and the same rules of carrying and borrowing work everywhere. Zero is also the starting point of the number line, the identity of addition, and the reason that dividing by it is forbidden.\n\n## A closing count\n\nThe decimal system uses the digits from zero to nine, which makes ten digits in all.\n\nFINAL ANSWER: 10"
+    },
+    "syn-l3-03": {
+      "text": "The value is 3.14159, which rounds to 3.14. A small program that prints it:\n\n```python\nimport math\nprint(round(math.pi, 2))\n```\n\nFINAL ANSWER: 3.14"
+    },
+    "probe-long": {
+      "text": "The printing press changed how ideas moved. Before it, every book was copied by hand, which took months and made each copy precious. Movable type made copies cheap, and cheap copies made readers. The printing press changed how ideas moved. Before it, every book was copied by hand, which took months and made each copy precious. Movable type made copies cheap, and cheap copies made readers. The printing press changed how ideas moved. Before it, every book was copied by hand, which took months and made each copy precious. Movable type made copies cheap, and cheap copies made readers. The printing press changed how ideas moved. Before it, every book was copied by hand, which took months and made each copy precious. Movable type made copies cheap, and cheap copies made readers. The printing press changed how ideas moved. Before it, every book was copied by hand, which took months and made each copy precious. Movable type made copies cheap, and cheap copies made readers. The printing press changed how ideas moved. Before it, every book was copied by hand, which took months and made each copy precious. Movable type made copies cheap, and cheap copies made readers. The printing press changed how ideas moved. Before it, every book was copied by hand, which took months and made each copy precious. Movable type made copies cheap, and cheap copies made readers. The printing press changed how ideas moved. Before it, every book was copied by hand, which took months and made each copy precious. Movable type made copies cheap, and cheap copies made readers.",
+      "word_delay_ms": 40
+    },
+    "probe-flaky": {
+      "text": "Back online.",
+      "fail_first": 1,
+      "error": "the agent is down"
+    }
+  }
+}

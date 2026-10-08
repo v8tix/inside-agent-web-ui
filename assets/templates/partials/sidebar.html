@@ -1,0 +1,21 @@
+{{/*
+  The conversation list. From the lg breakpoint up it is a column beside the
+  chat; below that it slides in from the left (Bootstrap's offcanvas-lg), opened
+  by the button in the header.
+*/}}
+{{define "partial:sidebar"}}
+<nav class="sidebar offcanvas-lg offcanvas-start" id="sidebar" tabindex="-1" aria-labelledby="sidebar-title" data-testid="sidebar">
+  <div class="offcanvas-header d-lg-none">
+    <h2 class="offcanvas-title h5" id="sidebar-title">Conversations</h2>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebar" aria-label="Close conversations"></button>
+  </div>
+  <div class="offcanvas-body sidebar-body">
+    <a href="/" class="btn btn-primary w-100 mb-3" data-testid="new-chat">New chat</a>
+    <ul class="list-unstyled conversation-list mb-0" data-testid="conversation-list" aria-label="Your conversations">
+      {{range .Conversations}}{{template "partial:conversation_item" .}}{{else}}
+      <li class="text-body-secondary small px-2">No conversations yet.</li>
+      {{end}}
+    </ul>
+  </div>
+</nav>
+{{end}}

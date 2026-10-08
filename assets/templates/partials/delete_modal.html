@@ -1,0 +1,23 @@
+{{/*
+  The confirmation for deleting a conversation: a Bootstrap modal, never
+  window.confirm. It is loaded into #modal-root when needed, so the title and
+  the address to delete are the server's, and app.js shows it.
+*/}}
+{{define "partial:delete_modal"}}<div class="modal fade" id="delete-modal" tabindex="-1" aria-labelledby="delete-modal-title" aria-hidden="true" data-testid="delete-dialog">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title h5" id="delete-modal-title">Delete this conversation?</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="mb-0">“<span class="fw-semibold" data-testid="delete-title">{{.Title}}</span>” and all its messages will be deleted for good.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal" data-testid="delete-cancel">Cancel</button>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal" data-testid="delete-confirm"
+                hx-delete="/c/{{.ID}}" hx-target="#conversation-{{.ID}}" hx-swap="outerHTML">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>{{end}}

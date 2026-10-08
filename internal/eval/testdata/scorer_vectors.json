@@ -1,0 +1,1837 @@
+{
+ "source": "https://huggingface.co/spaces/gaia-benchmark/leaderboard/raw/main/scorer.py",
+ "source_sha256": "0d44c07f3046eec521697c22e3eaca8719cc81e422a8eaf32695c5f22bdac6e2",
+ "python": "3.14.7",
+ "cases": [
+  {
+   "truth": "1000",
+   "want": true,
+   "answer": "1000"
+  },
+  {
+   "truth": "1000",
+   "want": true,
+   "answer": "$1,000"
+  },
+  {
+   "truth": "1000",
+   "want": true,
+   "answer": "1,000"
+  },
+  {
+   "truth": "1000",
+   "want": true,
+   "answer": "1000.0"
+  },
+  {
+   "truth": "1000",
+   "want": true,
+   "answer": "1e3"
+  },
+  {
+   "truth": "1000",
+   "want": true,
+   "answer": "1E3"
+  },
+  {
+   "truth": "1000",
+   "want": true,
+   "answer": " 1000 "
+  },
+  {
+   "truth": "1000",
+   "want": true,
+   "answer": "1_000"
+  },
+  {
+   "truth": "1000",
+   "want": true,
+   "answer": "$1,000.00"
+  },
+  {
+   "truth": "1000",
+   "want": true,
+   "answer": "1000%"
+  },
+  {
+   "truth": "1000",
+   "want": false,
+   "answer": "10 00"
+  },
+  {
+   "truth": "1000",
+   "want": false,
+   "answer": "one thousand"
+  },
+  {
+   "truth": "1000",
+   "want": false,
+   "answer": ""
+  },
+  {
+   "truth": "1000",
+   "want": false,
+   "answer": "None"
+  },
+  {
+   "truth": "1000",
+   "want": false,
+   "answer": "abc"
+  },
+  {
+   "truth": "1000",
+   "want": false,
+   "answer": "1000 dollars"
+  },
+  {
+   "truth": "0.5",
+   "want": true,
+   "answer": ".5"
+  },
+  {
+   "truth": "0.5",
+   "want": false,
+   "answer": "50%"
+  },
+  {
+   "truth": "0.5",
+   "want": true,
+   "answer": "0.50"
+  },
+  {
+   "truth": "0.5",
+   "want": false,
+   "answer": "1/2"
+  },
+  {
+   "truth": ".5",
+   "want": true,
+   "answer": "0.5"
+  },
+  {
+   "truth": "0.5",
+   "want": true,
+   "answer": "+0.5"
+  },
+  {
+   "truth": "-3",
+   "want": true,
+   "answer": "-3"
+  },
+  {
+   "truth": "-3",
+   "want": false,
+   "answer": "\u22123"
+  },
+  {
+   "truth": "-3",
+   "want": false,
+   "answer": "(3)"
+  },
+  {
+   "truth": "3",
+   "want": true,
+   "answer": "+3"
+  },
+  {
+   "truth": "-3",
+   "want": false,
+   "answer": "- 3"
+  },
+  {
+   "truth": "-3",
+   "want": true,
+   "answer": "-3.0"
+  },
+  {
+   "truth": "-3",
+   "want": false,
+   "answer": "--3"
+  },
+  {
+   "truth": "5",
+   "want": true,
+   "answer": "5."
+  },
+  {
+   "truth": "5.",
+   "want": true,
+   "answer": "5"
+  },
+  {
+   "truth": "5",
+   "want": true,
+   "answer": "05"
+  },
+  {
+   "truth": "5",
+   "want": true,
+   "answer": "5e0"
+  },
+  {
+   "truth": "5",
+   "want": true,
+   "answer": "5.0e0"
+  },
+  {
+   "truth": "16",
+   "want": false,
+   "answer": "0x10"
+  },
+  {
+   "truth": "0x10",
+   "want": false,
+   "answer": "16"
+  },
+  {
+   "truth": "inf",
+   "want": true,
+   "answer": "1e400"
+  },
+  {
+   "truth": "inf",
+   "want": true,
+   "answer": "inf"
+  },
+  {
+   "truth": "inf",
+   "want": true,
+   "answer": "garbage"
+  },
+  {
+   "truth": "inf",
+   "want": true,
+   "answer": "infinity"
+  },
+  {
+   "truth": "-inf",
+   "want": true,
+   "answer": "-inf"
+  },
+  {
+   "truth": "-inf",
+   "want": false,
+   "answer": "garbage"
+  },
+  {
+   "truth": "nan",
+   "want": false,
+   "answer": "nan"
+  },
+  {
+   "truth": "nan",
+   "want": false,
+   "answer": "NaN"
+  },
+  {
+   "truth": "nan",
+   "want": false,
+   "answer": "1"
+  },
+  {
+   "truth": "1e999",
+   "want": true,
+   "answer": "1e999"
+  },
+  {
+   "truth": "inf",
+   "want": true,
+   "answer": "1e999"
+  },
+  {
+   "truth": "\u0663",
+   "want": true,
+   "answer": "3"
+  },
+  {
+   "truth": "3",
+   "want": true,
+   "answer": "\u0663"
+  },
+  {
+   "truth": "3",
+   "want": true,
+   "answer": "\uff13"
+  },
+  {
+   "truth": "\uff13",
+   "want": true,
+   "answer": "3"
+  },
+  {
+   "truth": "12",
+   "want": true,
+   "answer": "\u0661\u0662"
+  },
+  {
+   "truth": "\u0661\u0662",
+   "want": true,
+   "answer": "12"
+  },
+  {
+   "truth": "10",
+   "want": true,
+   "answer": "1_0"
+  },
+  {
+   "truth": "10",
+   "want": false,
+   "answer": "1__0"
+  },
+  {
+   "truth": "1",
+   "want": false,
+   "answer": "_1"
+  },
+  {
+   "truth": "1",
+   "want": false,
+   "answer": "1_"
+  },
+  {
+   "truth": "1.5",
+   "want": false,
+   "answer": "1_.5"
+  },
+  {
+   "truth": "1.5",
+   "want": false,
+   "answer": "1._5"
+  },
+  {
+   "truth": "1e10",
+   "want": true,
+   "answer": "1e1_0"
+  },
+  {
+   "truth": "0.1",
+   "want": true,
+   "answer": "0.1"
+  },
+  {
+   "truth": "0.1",
+   "want": true,
+   "answer": "1e-1"
+  },
+  {
+   "truth": "0.1",
+   "want": false,
+   "answer": "10%"
+  },
+  {
+   "truth": "0.1",
+   "want": true,
+   "answer": "0.10"
+  },
+  {
+   "truth": "0.1",
+   "want": true,
+   "answer": "0.1 "
+  },
+  {
+   "truth": "0.1",
+   "want": true,
+   "answer": "\u00a00.1"
+  },
+  {
+   "truth": "1e21",
+   "want": true,
+   "answer": "1000000000000000000000"
+  },
+  {
+   "truth": "1000000000000000000000",
+   "want": true,
+   "answer": "1e21"
+  },
+  {
+   "truth": "0",
+   "want": true,
+   "answer": "0"
+  },
+  {
+   "truth": "0",
+   "want": true,
+   "answer": "-0"
+  },
+  {
+   "truth": "-0",
+   "want": true,
+   "answer": "0.0"
+  },
+  {
+   "truth": "1000000",
+   "want": true,
+   "answer": "1,000,000"
+  },
+  {
+   "truth": "1500000",
+   "want": false,
+   "answer": "$1.5M"
+  },
+  {
+   "truth": "1.50",
+   "want": true,
+   "answer": "1.5"
+  },
+  {
+   "truth": "3.14159",
+   "want": true,
+   "answer": "3.14159"
+  },
+  {
+   "truth": "3.14159",
+   "want": false,
+   "answer": "3.1416"
+  },
+  {
+   "truth": "5",
+   "want": false,
+   "answer": "5 6"
+  },
+  {
+   "truth": "5",
+   "want": false,
+   "answer": "5, 6"
+  },
+  {
+   "truth": "5",
+   "want": false,
+   "answer": "5;6"
+  },
+  {
+   "truth": "7",
+   "want": true,
+   "answer": "\t7\n"
+  },
+  {
+   "truth": "7",
+   "want": true,
+   "answer": "7\u2003"
+  },
+  {
+   "truth": "7",
+   "want": false,
+   "answer": "7\u200b"
+  },
+  {
+   "truth": "a, b, c",
+   "want": true,
+   "answer": "a;b;c"
+  },
+  {
+   "truth": "a, b, c",
+   "want": true,
+   "answer": "A , B ,C"
+  },
+  {
+   "truth": "a, b, c",
+   "want": false,
+   "answer": "a,b"
+  },
+  {
+   "truth": "a, b, c",
+   "want": false,
+   "answer": "c, b, a"
+  },
+  {
+   "truth": "a, b, c",
+   "want": false,
+   "answer": "a, b, c, d"
+  },
+  {
+   "truth": "1, 2, 3",
+   "want": true,
+   "answer": "1;2;3"
+  },
+  {
+   "truth": "1, 2, 3",
+   "want": true,
+   "answer": "1,2,3.0"
+  },
+  {
+   "truth": "1;TWO;3",
+   "want": true,
+   "answer": "1, two, 3"
+  },
+  {
+   "truth": "1; 2; 3",
+   "want": true,
+   "answer": "1, 2, 3"
+  },
+  {
+   "truth": "1, 2, 3",
+   "want": false,
+   "answer": "1 2 3"
+  },
+  {
+   "truth": "1,000",
+   "want": true,
+   "answer": "1,000"
+  },
+  {
+   "truth": "1,000",
+   "want": false,
+   "answer": "1000"
+  },
+  {
+   "truth": "1,000",
+   "want": true,
+   "answer": "1, 000"
+  },
+  {
+   "truth": "1,000",
+   "want": true,
+   "answer": "1,0"
+  },
+  {
+   "truth": "1,000",
+   "want": true,
+   "answer": "$1,$000"
+  },
+  {
+   "truth": "x;y",
+   "want": true,
+   "answer": "x, y"
+  },
+  {
+   "truth": "x,y",
+   "want": true,
+   "answer": "x;y"
+  },
+  {
+   "truth": "x,y",
+   "want": false,
+   "answer": "x y"
+  },
+  {
+   "truth": "a,b",
+   "want": false,
+   "answer": ""
+  },
+  {
+   "truth": "a,b",
+   "want": false,
+   "answer": "None"
+  },
+  {
+   "truth": "a,b",
+   "want": false,
+   "answer_is_none": true
+  },
+  {
+   "truth": "ab, c",
+   "want": false,
+   "answer": "a.b, c"
+  },
+  {
+   "truth": "a.b,c",
+   "want": true,
+   "answer": "A.B, C"
+  },
+  {
+   "truth": "a.b, c",
+   "want": false,
+   "answer": "ab, c"
+  },
+  {
+   "truth": "Red;3.0",
+   "want": true,
+   "answer": "red, 3"
+  },
+  {
+   "truth": "red, 3",
+   "want": true,
+   "answer": "Red;3.00"
+  },
+  {
+   "truth": "a,,b",
+   "want": true,
+   "answer": "a,,b"
+  },
+  {
+   "truth": "a,,b",
+   "want": false,
+   "answer": "a, b"
+  },
+  {
+   "truth": "a,",
+   "want": true,
+   "answer": "a,"
+  },
+  {
+   "truth": "a,",
+   "want": false,
+   "answer": "a"
+  },
+  {
+   "truth": "a,b",
+   "want": false,
+   "answer": "a,b,"
+  },
+  {
+   "truth": ",a",
+   "want": true,
+   "answer": ",a"
+  },
+  {
+   "truth": ",a",
+   "want": false,
+   "answer": "a"
+  },
+  {
+   "truth": "3;Red",
+   "want": true,
+   "answer": "3, red"
+  },
+  {
+   "truth": "3, red",
+   "want": true,
+   "answer": "3;Red"
+  },
+  {
+   "truth": "3, red",
+   "want": true,
+   "answer": "$3, red"
+  },
+  {
+   "truth": "3, red",
+   "want": true,
+   "answer": "3%, red"
+  },
+  {
+   "truth": "3, red",
+   "want": true,
+   "answer": "3.0, RED"
+  },
+  {
+   "truth": "Apple,Banana",
+   "want": true,
+   "answer": "apple, banana"
+  },
+  {
+   "truth": "Apple,Banana",
+   "want": false,
+   "answer": "apple banana"
+  },
+  {
+   "truth": "Apple,Banana",
+   "want": false,
+   "answer": "apple;banana;"
+  },
+  {
+   "truth": "1,2,",
+   "want": false,
+   "answer": "1,2"
+  },
+  {
+   "truth": "1,2,",
+   "want": true,
+   "answer": "1, 2,"
+  },
+  {
+   "truth": "1,2",
+   "want": false,
+   "answer": "12"
+  },
+  {
+   "truth": "1;2",
+   "want": true,
+   "answer": "1 , 2"
+  },
+  {
+   "truth": "1 , 2",
+   "want": true,
+   "answer": "1;2"
+  },
+  {
+   "truth": "new york;paris",
+   "want": true,
+   "answer": "New York, Paris"
+  },
+  {
+   "truth": "new york;paris",
+   "want": true,
+   "answer": "NewYork,Paris"
+  },
+  {
+   "truth": "new york;paris",
+   "want": false,
+   "answer": "New-York,Paris"
+  },
+  {
+   "truth": "its, fine",
+   "want": false,
+   "answer": "it's, fine"
+  },
+  {
+   "truth": "it's, fine",
+   "want": false,
+   "answer": "its, fine"
+  },
+  {
+   "truth": "us, canada",
+   "want": false,
+   "answer": "U.S., Canada"
+  },
+  {
+   "truth": "1, 2, 3\n",
+   "want": true,
+   "answer": "1, 2, 3"
+  },
+  {
+   "truth": "1, 2, 3",
+   "want": true,
+   "answer": "1,2,3\n"
+  },
+  {
+   "truth": "a,b,c",
+   "want": true,
+   "answer": "a,b\n,c"
+  },
+  {
+   "truth": "Saint Petersburg",
+   "want": true,
+   "answer": "Saint Petersburg"
+  },
+  {
+   "truth": "Saint Petersburg",
+   "want": true,
+   "answer": "saint-petersburg."
+  },
+  {
+   "truth": "Saint Petersburg",
+   "want": false,
+   "answer": "St. Petersburg"
+  },
+  {
+   "truth": "seagull",
+   "want": true,
+   "answer": "sea gull"
+  },
+  {
+   "truth": "sea gull",
+   "want": true,
+   "answer": "seagull"
+  },
+  {
+   "truth": "sea gull",
+   "want": true,
+   "answer": "SEAGULL"
+  },
+  {
+   "truth": "sea gull",
+   "want": true,
+   "answer": "sea  \t gull"
+  },
+  {
+   "truth": "obrien",
+   "want": true,
+   "answer": "O'Brien"
+  },
+  {
+   "truth": "O'Brien",
+   "want": true,
+   "answer": "obrien"
+  },
+  {
+   "truth": "usa",
+   "want": true,
+   "answer": "U.S.A."
+  },
+  {
+   "truth": "U.S.A.",
+   "want": true,
+   "answer": "usa"
+  },
+  {
+   "truth": "email",
+   "want": true,
+   "answer": "e-mail"
+  },
+  {
+   "truth": "c",
+   "want": true,
+   "answer": "C++"
+  },
+  {
+   "truth": "100",
+   "want": true,
+   "answer": "100%"
+  },
+  {
+   "truth": "100%",
+   "want": true,
+   "answer": "100"
+  },
+  {
+   "truth": "100%",
+   "want": true,
+   "answer": "100%"
+  },
+  {
+   "truth": "",
+   "want": true,
+   "answer": "!!!"
+  },
+  {
+   "truth": "!!!",
+   "want": true,
+   "answer": ""
+  },
+  {
+   "truth": "",
+   "want": true,
+   "answer": ""
+  },
+  {
+   "truth": "",
+   "want": true,
+   "answer": "   "
+  },
+  {
+   "truth": "ab",
+   "want": true,
+   "answer": "a b"
+  },
+  {
+   "truth": "None",
+   "want": true,
+   "answer": "None"
+  },
+  {
+   "truth": "None",
+   "want": true,
+   "answer": "none"
+  },
+  {
+   "truth": "None",
+   "want": true,
+   "answer_is_none": true
+  },
+  {
+   "truth": "none",
+   "want": true,
+   "answer_is_none": true
+  },
+  {
+   "truth": "5",
+   "want": false,
+   "answer_is_none": true
+  },
+  {
+   "truth": "",
+   "want": false,
+   "answer_is_none": true
+  },
+  {
+   "truth": "5",
+   "want": false,
+   "answer": "None"
+  },
+  {
+   "truth": "paris",
+   "want": true,
+   "answer": "Paris"
+  },
+  {
+   "truth": "Paris",
+   "want": true,
+   "answer": "Paris!"
+  },
+  {
+   "truth": "Paris",
+   "want": true,
+   "answer": "(Paris)"
+  },
+  {
+   "truth": "Paris",
+   "want": true,
+   "answer": "[Paris]"
+  },
+  {
+   "truth": "Paris",
+   "want": true,
+   "answer": "\"Paris\""
+  },
+  {
+   "truth": "Paris",
+   "want": true,
+   "answer": "`Paris`"
+  },
+  {
+   "truth": "Paris",
+   "want": true,
+   "answer": "Paris_"
+  },
+  {
+   "truth": "Paris",
+   "want": true,
+   "answer": "Pa~ris"
+  },
+  {
+   "truth": "Paris",
+   "want": true,
+   "answer": "Pa|ris"
+  },
+  {
+   "truth": "Paris",
+   "want": true,
+   "answer": "Pa\\ris"
+  },
+  {
+   "truth": "Paris",
+   "want": true,
+   "answer": "Pa/ris"
+  },
+  {
+   "truth": "Paris",
+   "want": true,
+   "answer": "Pa:ris"
+  },
+  {
+   "truth": "Paris",
+   "want": true,
+   "answer": "Pa@ris"
+  },
+  {
+   "truth": "Paris",
+   "want": true,
+   "answer": "Pa#ris"
+  },
+  {
+   "truth": "Paris",
+   "want": true,
+   "answer": "Pa$ris"
+  },
+  {
+   "truth": "Paris",
+   "want": true,
+   "answer": "Pa^ris"
+  },
+  {
+   "truth": "Paris",
+   "want": true,
+   "answer": "Pa&ris"
+  },
+  {
+   "truth": "Paris",
+   "want": true,
+   "answer": "Pa*ris"
+  },
+  {
+   "truth": "Paris",
+   "want": true,
+   "answer": "Pa=ris"
+  },
+  {
+   "truth": "Paris",
+   "want": true,
+   "answer": "Pa<ris>"
+  },
+  {
+   "truth": "new york",
+   "want": true,
+   "answer": "New\tYork\n"
+  },
+  {
+   "truth": "new york",
+   "want": true,
+   "answer": "New\u00a0York"
+  },
+  {
+   "truth": "new york",
+   "want": true,
+   "answer": "New\u2003York"
+  },
+  {
+   "truth": "new york",
+   "want": false,
+   "answer": "New\u200bYork"
+  },
+  {
+   "truth": "new york",
+   "want": true,
+   "answer": "New\u3000York"
+  },
+  {
+   "truth": "new york",
+   "want": true,
+   "answer": "New\u0085York"
+  },
+  {
+   "truth": "new york",
+   "want": true,
+   "answer": "New\u001cYork"
+  },
+  {
+   "truth": "new york",
+   "want": true,
+   "answer": "New\u001fYork"
+  },
+  {
+   "truth": "new york",
+   "want": true,
+   "answer": "NewYork\u2028"
+  },
+  {
+   "truth": "new york",
+   "want": false,
+   "answer": "New\u180eYork"
+  },
+  {
+   "truth": "new york",
+   "want": false,
+   "answer": "New\ufeffYork"
+  },
+  {
+   "truth": "z\u00fcrich",
+   "want": true,
+   "answer": "Z\u00fcrich"
+  },
+  {
+   "truth": "z\u00fcrich",
+   "want": true,
+   "answer": "Z\u00dcRICH"
+  },
+  {
+   "truth": "z\u00fcrich",
+   "want": false,
+   "answer": "Zu\u0308rich"
+  },
+  {
+   "truth": "Zu\u0308rich",
+   "want": false,
+   "answer": "z\u00fcrich"
+  },
+  {
+   "truth": "i\u0307stanbul",
+   "want": true,
+   "answer": "\u0130stanbul"
+  },
+  {
+   "truth": "istanbul",
+   "want": false,
+   "answer": "\u0130stanbul"
+  },
+  {
+   "truth": "\u0130stanbul",
+   "want": false,
+   "answer": "istanbul"
+  },
+  {
+   "truth": "\u0130stanbul",
+   "want": true,
+   "answer": "I\u0307stanbul"
+  },
+  {
+   "truth": "\u03b1\u03c2",
+   "want": true,
+   "answer": "\u0391\u03a3"
+  },
+  {
+   "truth": "\u03b1\u03c3",
+   "want": false,
+   "answer": "\u0391\u03a3"
+  },
+  {
+   "truth": "\u0391\u03a3",
+   "want": true,
+   "answer": "\u03b1\u03c2"
+  },
+  {
+   "truth": "\u03b1\u03c3 \u03b2",
+   "want": true,
+   "answer": "\u0391\u03a3 \u0392"
+  },
+  {
+   "truth": "\u03c3",
+   "want": true,
+   "answer": "\u03a3"
+  },
+  {
+   "truth": "\u03c2",
+   "want": false,
+   "answer": "\u03a3"
+  },
+  {
+   "truth": "\u03b1\u03c2",
+   "want": true,
+   "answer": "\u0391\u03a3."
+  },
+  {
+   "truth": "\u03b1'\u03c2",
+   "want": true,
+   "answer": "\u0391'\u03a3"
+  },
+  {
+   "truth": "\u03c3\u03b1",
+   "want": true,
+   "answer": "\u03a3\u0391"
+  },
+  {
+   "truth": "STRASSE",
+   "want": false,
+   "answer": "Stra\u00dfe"
+  },
+  {
+   "truth": "Stra\u00dfe",
+   "want": false,
+   "answer": "STRASSE"
+  },
+  {
+   "truth": "Stra\u00dfe",
+   "want": true,
+   "answer": "Stra\u1e9ee"
+  },
+  {
+   "truth": "\u00df",
+   "want": true,
+   "answer": "\u1e9e"
+  },
+  {
+   "truth": "\u1e9e",
+   "want": true,
+   "answer": "\u00df"
+  },
+  {
+   "truth": "Na\u00cfve Caf\u00c9",
+   "want": true,
+   "answer": "na\u00efve caf\u00e9"
+  },
+  {
+   "truth": "\u65e5\u672c\u8a9e",
+   "want": true,
+   "answer": "\u65e5\u672c\u8a9e"
+  },
+  {
+   "truth": "\u65e5\u672c",
+   "want": true,
+   "answer": "\u65e5 \u672c"
+  },
+  {
+   "truth": "\ud83d\ude42",
+   "want": true,
+   "answer": "\ud83d\ude42"
+  },
+  {
+   "truth": "\ud83d\ude42",
+   "want": true,
+   "answer": "\ud83d\ude42 "
+  },
+  {
+   "truth": "ab",
+   "want": false,
+   "answer": "a\ud83d\ude42b"
+  },
+  {
+   "truth": "e\u0301",
+   "want": false,
+   "answer": "\u00e9"
+  },
+  {
+   "truth": "\u00e9",
+   "want": false,
+   "answer": "e\u0301"
+  },
+  {
+   "truth": "Paris",
+   "want": false,
+   "answer": "\u201cParis\u201d"
+  },
+  {
+   "truth": "Paris",
+   "want": false,
+   "answer": "\u2018Paris\u2019"
+  },
+  {
+   "truth": "ParisFrance",
+   "want": false,
+   "answer": "Paris\u2014France"
+  },
+  {
+   "truth": "Paris, France",
+   "want": false,
+   "answer": "Paris\uff0cFrance"
+  },
+  {
+   "truth": "\u00e5ngstr\u00f6m",
+   "want": true,
+   "answer": "\u00c5ngstr\u00f6m"
+  },
+  {
+   "truth": "\u01c6",
+   "want": true,
+   "answer": "\u01c4"
+  },
+  {
+   "truth": "\u01c6",
+   "want": true,
+   "answer": "\u01c5"
+  },
+  {
+   "truth": "\u01c4",
+   "want": true,
+   "answer": "\u01c6"
+  },
+  {
+   "truth": "\u0432\u043b\u0430\u0434\u0438\u043c\u0438\u0440",
+   "want": true,
+   "answer": "\u0412\u043b\u0430\u0434\u0438\u043c\u0438\u0440"
+  },
+  {
+   "truth": "\u0645\u0631\u062d\u0628\u0627",
+   "want": true,
+   "answer": "\u0645\u0631\u062d\u0628\u0627"
+  },
+  {
+   "truth": "\u2170",
+   "want": true,
+   "answer": "\u2160"
+  },
+  {
+   "truth": "\u24d0",
+   "want": true,
+   "answer": "\u24b6"
+  },
+  {
+   "truth": "\uff41",
+   "want": true,
+   "answer": "\uff21"
+  },
+  {
+   "truth": "ab",
+   "want": false,
+   "answer": "\uff21\uff22"
+  },
+  {
+   "truth": "forty-two",
+   "want": false,
+   "answer": "42"
+  },
+  {
+   "truth": "forty-two",
+   "want": true,
+   "answer": "forty two"
+  },
+  {
+   "truth": "forty-two",
+   "want": true,
+   "answer": "fortytwo"
+  },
+  {
+   "truth": "4 2",
+   "want": true,
+   "answer": "42"
+  },
+  {
+   "truth": "42",
+   "want": false,
+   "answer": "4 2"
+  },
+  {
+   "truth": "5",
+   "want": false,
+   "answer": "five"
+  },
+  {
+   "truth": "five",
+   "want": false,
+   "answer": "5"
+  },
+  {
+   "truth": "five",
+   "want": true,
+   "answer": "Five"
+  },
+  {
+   "truth": "first",
+   "want": false,
+   "answer": "1st"
+  },
+  {
+   "truth": "2",
+   "want": false,
+   "answer": "2nd"
+  },
+  {
+   "truth": "7",
+   "want": true,
+   "answer": "\t7"
+  },
+  {
+   "truth": "0.25",
+   "want": false,
+   "answer": "0.25.0"
+  },
+  {
+   "truth": "12345",
+   "want": true,
+   "answer": "12345.0"
+  },
+  {
+   "truth": "-8",
+   "want": false,
+   "answer": "+-8"
+  },
+  {
+   "truth": "3.5",
+   "want": true,
+   "answer": "3.5\n"
+  },
+  {
+   "truth": "-0.5",
+   "want": true,
+   "answer": "-0.5\n"
+  },
+  {
+   "truth": "100",
+   "want": true,
+   "answer": "100"
+  },
+  {
+   "truth": "100",
+   "want": true,
+   "answer": "100e0"
+  },
+  {
+   "truth": "0.25",
+   "want": true,
+   "answer": "\t0.25"
+  },
+  {
+   "truth": "1",
+   "want": true,
+   "answer": "1"
+  },
+  {
+   "truth": "-8",
+   "want": true,
+   "answer": "$-8"
+  },
+  {
+   "truth": "7",
+   "want": true,
+   "answer": "7.0"
+  },
+  {
+   "truth": "-0.5",
+   "want": true,
+   "answer": "-0.5"
+  },
+  {
+   "truth": "7",
+   "want": true,
+   "answer": "7\n"
+  },
+  {
+   "truth": "100",
+   "want": true,
+   "answer": "100.0"
+  },
+  {
+   "truth": "42",
+   "want": true,
+   "answer": "+42"
+  },
+  {
+   "truth": "12345",
+   "want": true,
+   "answer": "12,345e0"
+  },
+  {
+   "truth": "-8",
+   "want": true,
+   "answer": " -8 "
+  },
+  {
+   "truth": "1000000.0",
+   "want": true,
+   "answer": " 1000000.0 "
+  },
+  {
+   "truth": "3.5",
+   "want": false,
+   "answer": "3.5.0"
+  },
+  {
+   "truth": "0",
+   "want": true,
+   "answer": "\t0"
+  },
+  {
+   "truth": "7",
+   "want": true,
+   "answer": "7e0"
+  },
+  {
+   "truth": "1000000.0",
+   "want": false,
+   "answer": "-1000000.0"
+  },
+  {
+   "truth": "42",
+   "want": true,
+   "answer": "42"
+  },
+  {
+   "truth": "1000",
+   "want": false,
+   "answer": "-1000"
+  },
+  {
+   "truth": "-0.5",
+   "want": true,
+   "answer": "-0.5%"
+  },
+  {
+   "truth": "-8",
+   "want": true,
+   "answer": "-8e0"
+  },
+  {
+   "truth": "7",
+   "want": true,
+   "answer": "7"
+  },
+  {
+   "truth": "0.25",
+   "want": true,
+   "answer": "0.25"
+  },
+  {
+   "truth": "7",
+   "want": true,
+   "answer": " 7 "
+  },
+  {
+   "truth": "1",
+   "want": true,
+   "answer": "+1"
+  },
+  {
+   "truth": "1",
+   "want": true,
+   "answer": "1.0"
+  },
+  {
+   "truth": "12345",
+   "want": false,
+   "answer": "12,345,0"
+  },
+  {
+   "truth": "3.5",
+   "want": true,
+   "answer": "3.5e0"
+  },
+  {
+   "truth": "12345",
+   "want": true,
+   "answer": "\t12345"
+  },
+  {
+   "truth": "0.25",
+   "want": true,
+   "answer": "0.25%"
+  },
+  {
+   "truth": "0.25",
+   "want": true,
+   "answer": "+0.25"
+  },
+  {
+   "truth": "3.5",
+   "want": true,
+   "answer": "3.5"
+  },
+  {
+   "truth": "100",
+   "want": true,
+   "answer": " 100 "
+  },
+  {
+   "truth": "42",
+   "want": true,
+   "answer": "\t42"
+  },
+  {
+   "truth": "12345",
+   "want": true,
+   "answer": "12345\n"
+  },
+  {
+   "truth": "1",
+   "want": true,
+   "answer": "1e0"
+  },
+  {
+   "truth": "12345",
+   "want": true,
+   "answer": "12345%"
+  },
+  {
+   "truth": "3.5",
+   "want": true,
+   "answer": "+3.5"
+  },
+  {
+   "truth": "1",
+   "want": false,
+   "answer": "1,0"
+  },
+  {
+   "truth": "12345",
+   "want": false,
+   "answer": "12345,0"
+  },
+  {
+   "truth": "-8",
+   "want": true,
+   "answer": "-8%"
+  },
+  {
+   "truth": "-8",
+   "want": true,
+   "answer": "-8\n"
+  },
+  {
+   "truth": "St. Louis, 0.315",
+   "want": false,
+   "answer": "St. Louis"
+  },
+  {
+   "truth": "x_y; 38; 64; 38",
+   "want": true,
+   "answer": "X_Y;38;64;38"
+  },
+  {
+   "truth": "x_y, Z\u00fcrich",
+   "want": true,
+   "answer": "X_Y , Z\u00fcrich"
+  },
+  {
+   "truth": "0.781; 0.880; \u0391\u03a3",
+   "want": false,
+   "answer": "0.781; 0.880"
+  },
+  {
+   "truth": "0.863,0.419",
+   "want": true,
+   "answer": "0.863; 0.419"
+  },
+  {
+   "truth": "0.567, A.B.C., 0.000",
+   "want": false,
+   "answer": "0.567; A.B.C."
+  },
+  {
+   "truth": "Stra\u00dfe,46,Paris",
+   "want": false,
+   "answer": "STRASSE;46;Paris"
+  },
+  {
+   "truth": "0.596, \u0130zmir, 0.190, 45",
+   "want": true,
+   "answer": "0.596;\u0130zmir;0.190;45"
+  },
+  {
+   "truth": "\u0391\u03a3; 91; 19",
+   "want": true,
+   "answer": "\u0391\u03a3; 91; 19"
+  },
+  {
+   "truth": "0.520; Stra\u00dfe; 65; 94",
+   "want": false,
+   "answer": "0.520;STRASSE;65;94"
+  },
+  {
+   "truth": "0.365,O'Neil,Paris",
+   "want": false,
+   "answer": "0.365; O'Neil"
+  },
+  {
+   "truth": "89,0.158,20,13",
+   "want": true,
+   "answer": "89, 0.158, 20, 13"
+  },
+  {
+   "truth": "0.304,6,38",
+   "want": true,
+   "answer": "0.304, 6, 38"
+  },
+  {
+   "truth": "x_y;64;0.716;22",
+   "want": true,
+   "answer": "x_y, 64, 0.716, 22"
+  },
+  {
+   "truth": "0.393,0.661",
+   "want": true,
+   "answer": "0.393;0.661"
+  },
+  {
+   "truth": "Z\u00fcrich; 36",
+   "want": false,
+   "answer": "Z\u00fcrich"
+  },
+  {
+   "truth": "0.474; 0.884; new york",
+   "want": true,
+   "answer": "0.474, 0.884, new york"
+  },
+  {
+   "truth": "0.229, 0.471, 25, 5",
+   "want": true,
+   "answer": "0.229, 0.471, 25, 5"
+  },
+  {
+   "truth": "0.407; 0.853; 75; 0.429",
+   "want": false,
+   "answer": "0.407, 0.853, 75"
+  },
+  {
+   "truth": "13,new york",
+   "want": true,
+   "answer": "13;new york"
+  },
+  {
+   "truth": "0.256;\u0391\u03a3;0.056;St. Louis",
+   "want": true,
+   "answer": "0.256, \u0391\u03a3, 0.056, ST. LOUIS"
+  },
+  {
+   "truth": "71;0.404;0.416;\u0130zmir",
+   "want": false,
+   "answer": "71, 0.404, 0.416"
+  },
+  {
+   "truth": "\u0391\u03a3; \u0391\u03a3; 0.501; 82",
+   "want": true,
+   "answer": "\u0391\u03a3;\u0391\u03a3;0.501;82"
+  },
+  {
+   "truth": "3, 0.040, A.B.C., 0.506",
+   "want": true,
+   "answer": "3; 0.040; A.B.C.; 0.506"
+  },
+  {
+   "truth": "0.126;34",
+   "want": true,
+   "answer": "0.126; 34"
+  },
+  {
+   "truth": "9,7",
+   "want": true,
+   "answer": "9; 7"
+  },
+  {
+   "truth": "0.573; 10; 31",
+   "want": true,
+   "answer": "0.573, 10, 31"
+  },
+  {
+   "truth": "67, 0.401, 69, 15",
+   "want": true,
+   "answer": "67;0.401;69;15"
+  },
+  {
+   "truth": "0.953, 87, 35",
+   "want": true,
+   "answer": "0.953;87;35"
+  },
+  {
+   "truth": "Stra\u00dfe; Stra\u00dfe; 0.398",
+   "want": false,
+   "answer": "Stra\u00dfe,STRASSE"
+  },
+  {
+   "truth": "\u0391\u03a3;16;0.205",
+   "want": true,
+   "answer": "\u0391\u03a3, 16, 0.205"
+  },
+  {
+   "truth": "0.478; \u0391\u03a3; 0.452",
+   "want": true,
+   "answer": "0.478 , \u0391\u03a3 , 0.452"
+  },
+  {
+   "truth": "A.B.C.; 12",
+   "want": true,
+   "answer": "A.B.C.;12"
+  },
+  {
+   "truth": "new york; new york",
+   "want": true,
+   "answer": "NEW YORK , new york"
+  },
+  {
+   "truth": "0.689;53",
+   "want": true,
+   "answer": "0.689 , 53"
+  },
+  {
+   "truth": "new york;95",
+   "want": true,
+   "answer": "new york; 95"
+  },
+  {
+   "truth": "\u0130zmir; 0.861; 0.033",
+   "want": true,
+   "answer": "\u0130zmir;0.861;0.033"
+  },
+  {
+   "truth": "St. Louis;\u0130zmir",
+   "want": true,
+   "answer": "St. Louis; \u0130ZMIR"
+  },
+  {
+   "truth": "0.390, 0.857, 0, O'Neil",
+   "want": true,
+   "answer": "0.390, 0.857, 0, O'Neil"
+  },
+  {
+   "truth": "22; 89; 20; 0.024",
+   "want": false,
+   "answer": "22, 89, 20"
+  },
+  {
+   "truth": "\u0391\u03a3",
+   "want": true,
+   "answer": "\u0391\u03a3."
+  },
+  {
+   "truth": "St. Louis",
+   "want": true,
+   "answer": "st. louis"
+  },
+  {
+   "truth": "e-mail",
+   "want": true,
+   "answer": "e-mail"
+  },
+  {
+   "truth": "x_y",
+   "want": true,
+   "answer": "x_y"
+  },
+  {
+   "truth": "new york",
+   "want": true,
+   "answer": "newyork"
+  },
+  {
+   "truth": "Paris",
+   "want": true,
+   "answer": "Paris"
+  },
+  {
+   "truth": "x_y",
+   "want": true,
+   "answer": "x_y."
+  },
+  {
+   "truth": "Z\u00fcrich",
+   "want": true,
+   "answer": "z\u00fcrich"
+  },
+  {
+   "truth": "new york",
+   "want": true,
+   "answer": "NEW YORK"
+  },
+  {
+   "truth": "Paris",
+   "want": true,
+   "answer": "paris"
+  },
+  {
+   "truth": "Z\u00fcrich",
+   "want": true,
+   "answer": "Z\u00fcrich"
+  },
+  {
+   "truth": "\u0391\u03a3",
+   "want": true,
+   "answer": "\u0391\u03a3"
+  },
+  {
+   "truth": "\u0130zmir",
+   "want": true,
+   "answer": "\u0130zmir"
+  },
+  {
+   "truth": "sea gull",
+   "want": true,
+   "answer": "SEA GULL"
+  },
+  {
+   "truth": "O'Neil",
+   "want": true,
+   "answer": "O'Neil."
+  },
+  {
+   "truth": "new york",
+   "want": true,
+   "answer": "new york."
+  },
+  {
+   "truth": "Stra\u00dfe",
+   "want": true,
+   "answer": "Stra\u00dfe"
+  },
+  {
+   "truth": "St. Louis",
+   "want": true,
+   "answer": "(St. Louis)"
+  },
+  {
+   "truth": "St. Louis",
+   "want": true,
+   "answer": "St. Louis."
+  },
+  {
+   "truth": "O'Neil",
+   "want": true,
+   "answer": "O'NEIL"
+  },
+  {
+   "truth": "sea gull",
+   "want": true,
+   "answer": "sea gull"
+  },
+  {
+   "truth": "e-mail",
+   "want": true,
+   "answer": "(e-mail)"
+  },
+  {
+   "truth": "O'Neil",
+   "want": true,
+   "answer": "O'Neil"
+  },
+  {
+   "truth": "sea gull",
+   "want": true,
+   "answer": "sea gull."
+  },
+  {
+   "truth": "Z\u00fcrich",
+   "want": true,
+   "answer": "Z\u00fcrich."
+  },
+  {
+   "truth": "Z\u00fcrich",
+   "want": true,
+   "answer": "Z\u00dcRICH"
+  },
+  {
+   "truth": "\u0130zmir",
+   "want": true,
+   "answer": "(\u0130zmir)"
+  },
+  {
+   "truth": "St. Louis",
+   "want": true,
+   "answer": "St.-Louis"
+  }
+ ]
+}

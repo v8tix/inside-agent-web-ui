@@ -1,0 +1,32 @@
+{{define "page:title"}}{{if .Active}}{{.Active.Title}}{{else}}New chat{{end}}{{end}}
+
+{{define "page:bodyclass"}}app-fixed{{end}}
+
+{{/* The list can be long, so keyboard users can jump past it, to reading or to writing. */}}
+{{define "page:skiplinks"}}<a class="visually-hidden-focusable" href="#main">Skip to conversation</a>
+  <a class="visually-hidden-focusable" href="#composer-input" data-testid="skip-to-composer">Skip to message box</a>{{end}}
+
+{{/* The chat page's landmarks: the conversation list (nav) beside the conversation (main). */}}
+{{define "page:wrap"}}
+<div class="chat-layout">
+  {{template "partial:sidebar" .}}
+  <main id="main" class="chat-column" aria-label="Conversation" tabindex="-1">
+    {{template "page:main" .}}
+  </main>
+</div>
+{{end}}
+
+{{define "page:main"}}
+<div id="messages" class="messages" data-testid="messages">
+  {{range .Messages}}{{template "partial:message" .}}{{else}}
+  <div class="empty-state text-center text-body-secondary">
+    <h1 class="h4">How can I help?</h1>
+    <p class="mb-0">Ask the agent anything.</p>
+  </div>
+  {{end}}
+</div>
+<div class="composer-dock">
+  <button type="button" id="jump-latest" class="btn btn-sm btn-secondary jump-latest" data-testid="jump-latest" hidden>Jump to latest</button>
+  {{template "partial:composer" .}}
+</div>
+{{end}}
