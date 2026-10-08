@@ -1,0 +1,3 @@
+## Pages
+1: about:blank
+2: Fake chat (http://127.0.0.1:51008/) [selected]

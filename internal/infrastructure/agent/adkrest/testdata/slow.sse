@@ -1,0 +1,102 @@
+data: {"id":"5d4b555c-0541-4ed6-bb6d-bceae3c25d57","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 1 "}]}}
+
+data: {"id":"cf7c2a0d-3fc8-4488-a436-4e90f56b5d79","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 2 "}]}}
+
+data: {"id":"4eb074b9-e108-4786-9ff9-6c885b6376af","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 3 "}]}}
+
+data: {"id":"dda9a664-6669-4291-aa38-6dbf8d20a730","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 4 "}]}}
+
+data: {"id":"e763be03-963f-4d34-b194-d0816041654d","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 5 "}]}}
+
+data: {"id":"14ce04dd-5e20-49c4-9d6a-80d89edad5c9","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 6 "}]}}
+
+data: {"id":"c910ca68-7dde-4be5-83af-c5352d30a654","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 7 "}]}}
+
+data: {"id":"ea207109-4ca7-457c-a799-3cf81f8cd2ac","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 8 "}]}}
+
+data: {"id":"780dcc00-f14d-49a9-b448-42db8245e63c","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 9 "}]}}
+
+data: {"id":"399cfdb1-c8ee-4e05-a184-475dc35dec1c","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 10 "}]}}
+
+data: {"id":"07cc9149-fd7a-4626-8533-533470663992","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 11 "}]}}
+
+data: {"id":"c9346032-9f31-43d1-8026-10dbdf31e5eb","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 12 "}]}}
+
+data: {"id":"94dcf80e-4024-4e78-ba1b-a13800a3b4a0","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 13 "}]}}
+
+data: {"id":"e7908041-31ae-4ca8-9ca4-3539fdfc2918","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 14 "}]}}
+
+data: {"id":"c477050d-6133-4c3c-8bcf-a381048e7eaa","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 15 "}]}}
+
+data: {"id":"c316f1ec-2732-4ad3-9afe-82b6a693856b","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 16 "}]}}
+
+data: {"id":"446c20e0-5b8c-40ef-88a7-930c8430d2be","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 17 "}]}}
+
+data: {"id":"47a34d15-0864-48b6-aa9e-f061d4b334a5","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 18 "}]}}
+
+data: {"id":"150310b9-289f-4e57-88a9-db9e4054da2a","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 19 "}]}}
+
+data: {"id":"86f3c63a-558f-4b25-bcef-fc45410c3c18","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 20 "}]}}
+
+data: {"id":"1246abc8-ff8d-49c3-be3a-b06d1cc9d152","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 21 "}]}}
+
+data: {"id":"84826924-0541-43b3-84d5-201d5d858208","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 22 "}]}}
+
+data: {"id":"82a664bc-db8c-4c50-aed2-b6dba6f23173","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 23 "}]}}
+
+data: {"id":"6bc41e17-0acf-435b-b14a-1e4bef458b5a","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 24 "}]}}
+
+data: {"id":"a9d0693a-2a73-4c5a-ad64-eb4eb42ea8fc","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 25 "}]}}
+
+data: {"id":"99cea24b-80aa-48b0-b39c-d8dcac61a80f","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 26 "}]}}
+
+data: {"id":"7af9bb9d-4aa9-4712-8ce2-c1a610d83a39","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 27 "}]}}
+
+data: {"id":"5854523c-1988-476c-bbfb-7cd6977e78b5","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 28 "}]}}
+
+data: {"id":"05f900a0-6b75-47cf-a62d-532ff486fa6d","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 29 "}]}}
+
+data: {"id":"663a1f4d-b2dd-49c3-bfe9-ed207b4b2106","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 30 "}]}}
+
+data: {"id":"d25f9bba-7cfb-4a36-a2ef-4bb76f15e2fe","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 31 "}]}}
+
+data: {"id":"4f256998-7dc7-4893-8dc0-05be73c37112","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 32 "}]}}
+
+data: {"id":"b6c3b309-7477-4285-90fc-a5c3c5dd212a","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 33 "}]}}
+
+data: {"id":"f888c25d-95bf-44d2-a54a-139dd824688c","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 34 "}]}}
+
+data: {"id":"765667f2-cf3e-444c-af83-4585f7ed37da","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 35 "}]}}
+
+data: {"id":"bb2c56b6-6c96-48e9-b11d-563181741a7c","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 36 "}]}}
+
+data: {"id":"bd36333d-0bd7-45fe-858b-aed5185eb577","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 37 "}]}}
+
+data: {"id":"96cadb37-fba6-432f-b037-1f077a53d06e","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 38 "}]}}
+
+data: {"id":"4ef0e8c9-60f7-4a33-b4aa-563131975c4f","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 39 "}]}}
+
+data: {"id":"c431f5a3-4b7d-49d0-a4e7-35cf8c9640cb","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 40 "}]}}
+
+data: {"id":"ff106e47-8f1f-4171-ac1d-f43a1df87b29","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 41 "}]}}
+
+data: {"id":"aec9de3d-e17e-44c6-858e-ba1e26134505","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 42 "}]}}
+
+data: {"id":"dc0a5bc8-1e79-43cd-864a-8dc36c27a3f5","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 43 "}]}}
+
+data: {"id":"70aa31b7-caa3-456b-bad8-b2b4171f8a15","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 44 "}]}}
+
+data: {"id":"d76aba5e-7d14-420e-ab42-718c5c43d17e","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 45 "}]}}
+
+data: {"id":"2d5f626c-cd1c-4fae-8d1d-1bf53cd61fee","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 46 "}]}}
+
+data: {"id":"d1268d8e-3865-48cc-b4e1-d1087a2fb279","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 47 "}]}}
+
+data: {"id":"aec30407-9089-439e-be14-3a164c4ee8a9","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 48 "}]}}
+
+data: {"id":"aacc0411-3fa9-45b5-9a09-50bece86a4bf","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 49 "}]}}
+
+data: {"id":"34bfe033-04ff-413a-b0bd-734e7610af00","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 50 "}]}}
+
+data: {"id":"551f8036-92f1-4b5a-8d8b-b0632f61f5e7","invocationId":"e-963d9b7d-40d5-4587-ace8-7f6f0710e0ad","author":"ui_agent","groundingMetadata":null,"usageMetadata":{"candidatesTokenCount":100,"promptTokenCount":1,"totalTokenCount":101},"turnComplete":true,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"tick 1 tick 2 tick 3 tick 4 tick 5 tick 6 tick 7 tick 8 tick 9 tick 10 tick 11 tick 12 tick 13 tick 14 tick 15 tick 16 tick 17 tick 18 tick 19 tick 20 tick 21 tick 22 tick 23 tick 24 tick 25 tick 26 tick 27 tick 28 tick 29 tick 30 tick 31 tick 32 tick 33 tick 34 tick 35 tick 36 tick 37 tick 38 tick 39 tick 40 tick 41 tick 42 tick 43 tick 44 tick 45 tick 46 tick 47 tick 48 tick 49 tick 50 "}]}}
+

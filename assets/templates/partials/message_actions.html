@@ -1,0 +1,21 @@
+{{/*
+  What can be done with a finished reply. Copy is for every reply that has
+  text. Regenerate and Retry ask for a new reply in this one's place (the
+  answer is the new reply's wrapper); only the latest reply offers them, and
+  they go away from earlier ones (see app.css).
+*/}}
+{{define "partial:message_actions"}}<div class="message-actions" data-testid="message-actions">
+  {{if .Copy}}
+  <button type="button" class="btn btn-sm btn-outline-secondary" data-testid="copy-message" aria-label="Copy response"
+          data-raw-url="/c/{{.ConversationID}}/m/{{.ID}}/raw">Copy</button>
+  {{end}}
+  {{if .Actions}}
+  {{if eq .Status "failed"}}
+  <button type="button" class="btn btn-sm btn-outline-secondary latest-only" data-testid="retry"
+          hx-post="/c/{{.ConversationID}}/m/{{.ID}}/regenerate" hx-target="closest .reply" hx-swap="outerHTML" hx-disabled-elt="this">Retry</button>
+  {{else}}
+  <button type="button" class="btn btn-sm btn-outline-secondary latest-only" data-testid="regenerate" aria-label="Regenerate response"
+          hx-post="/c/{{.ConversationID}}/m/{{.ID}}/regenerate" hx-target="closest .reply" hx-swap="outerHTML" hx-disabled-elt="this">Regenerate</button>
+  {{end}}
+  {{end}}
+</div>{{end}}

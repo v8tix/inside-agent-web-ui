@@ -1,0 +1,4 @@
+Script ran on page and returned:
+```json
+{"contract":"1","msgs":[{"role":"user","status":"complete","text":"What is the answer?"},{"role":"assistant","status":"complete","ttft":"63","dur":"722","text":"Thinking about your question. The answer is forty two. FINAL ANSWER: 42"}],"keydown":393}
+```

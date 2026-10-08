@@ -1,0 +1,7 @@
+{{- /*
+  Takes the row lock of the conversation, which makes the changes to its
+  messages wait for each other, and proves that the user owns it.
+*/ -}}
+SELECT id FROM conversations
+WHERE id = $1 AND user_id = $2
+FOR UPDATE

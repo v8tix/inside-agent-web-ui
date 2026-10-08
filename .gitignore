@@ -1,0 +1,21 @@
+# Local config and secrets (only the example is tracked)
+/.env*
+!/.env.example
+# A copy under another name, for --env
+*.env
+
+# Build output and locally built tools
+/bin/
+
+# Runtime output
+/logs/
+/results/
+
+# GAIA is a gated dataset: never commit it
+/datasets/
+
+# IDE settings
+/.idea/
+
+# Phase documents and scratch
+/temp/

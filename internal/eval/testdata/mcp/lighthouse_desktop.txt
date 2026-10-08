@@ -1,0 +1,16 @@
+## Lighthouse Audit Results
+Mode: navigation
+Device: desktop
+URL: http://127.0.0.1:51008/
+### Category Scores
+- Accessibility: 95 (accessibility)
+- Best Practices: 100 (best-practices)
+- SEO: 90 (seo)
+- Agentic Browsing: 100 (agentic-browsing)
+### Audit Summary
+Passed: 42
+Failed: 2
+Total Timing: 3706.87ms
+### Reports
+- <out>/report.json
+- <out>/report.html

@@ -1,0 +1,10 @@
+HTTP/1.1 200 OK
+Access-Control-Allow-Headers: Content-Type, Authorization
+Access-Control-Allow-Methods: GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS
+Access-Control-Allow-Origin: http://localhost:8080
+Content-Type: application/json; charset=UTF-8
+Vary: Origin
+Date: <date>
+Content-Length: 105
+
+{"id":"brand-new","appName":"ui_agent","userId":"u1","lastUpdateTime":1790952921,"events":[],"state":{}}

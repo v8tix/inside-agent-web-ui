@@ -1,0 +1,4 @@
+SELECT {{template "sql/message/columns.gotmpl" -}}
+FROM messages m
+WHERE m.conversation_id = $1
+ORDER BY m.seq

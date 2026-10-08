@@ -1,0 +1,14 @@
+data: {"id":"d93a0d50-668d-4181-8225-25636662f8de","invocationId":"e-59aec272-4468-4253-8b40-e8efddcf6b0f","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"Let me think about that.","thought":true}]}}
+
+data: {"id":"3a64bbec-9761-412e-b722-8a788c436986","invocationId":"e-59aec272-4468-4253-8b40-e8efddcf6b0f","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"You "}]}}
+
+data: {"id":"b9a2acb8-c843-478f-8458-7fc4d55ee958","invocationId":"e-59aec272-4468-4253-8b40-e8efddcf6b0f","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"said: "}]}}
+
+data: {"id":"5ed8651c-5a8e-4b30-929f-a49f12ad9961","invocationId":"e-59aec272-4468-4253-8b40-e8efddcf6b0f","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"#think "}]}}
+
+data: {"id":"d20e1cb4-fd52-4534-a938-f1f26f75c914","invocationId":"e-59aec272-4468-4253-8b40-e8efddcf6b0f","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"what "}]}}
+
+data: {"id":"9474458a-e010-490f-99b5-9e040116c4af","invocationId":"e-59aec272-4468-4253-8b40-e8efddcf6b0f","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"now"}]}}
+
+data: {"id":"759eddd7-9c07-4838-b6be-cc12523741fc","invocationId":"e-59aec272-4468-4253-8b40-e8efddcf6b0f","author":"ui_agent","groundingMetadata":null,"usageMetadata":{"candidatesTokenCount":5,"promptTokenCount":3,"totalTokenCount":8},"turnComplete":true,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"Let me think about that.","thought":true},{"text":"You said: #think what now"}]}}
+

@@ -1,0 +1,14 @@
+{{/* The sidebar row while its title is being edited. Save replaces the row with the renamed one; Cancel brings back the original. */}}
+{{define "partial:rename_form"}}<li class="conversation-item editing" id="conversation-{{.ID}}" data-testid="conversation" data-id="{{.ID}}">
+  <form class="rename-form" hx-patch="/c/{{.ID}}" hx-target="#conversation-{{.ID}}" hx-swap="outerHTML" data-testid="rename-form">
+    <label for="rename-{{.ID}}" class="visually-hidden">Conversation title</label>
+    <input id="rename-{{.ID}}" name="title" class="form-control form-control-sm{{if .Error}} is-invalid{{end}}" value="{{.Title}}"
+           maxlength="{{.MaxChars}}" required autofocus autocomplete="off" aria-describedby="rename-error-{{.ID}}"{{if .Error}} aria-invalid="true"{{end}} data-testid="rename-input">
+    <div id="rename-error-{{.ID}}" class="text-danger-emphasis small mt-1" role="alert" data-testid="rename-error">{{.Error}}</div>
+    <div class="rename-buttons">
+      <button type="submit" class="btn btn-sm btn-primary" data-testid="rename-save">Save</button>
+      <button type="button" class="btn btn-sm btn-outline-secondary" data-testid="rename-cancel"
+              hx-get="/c/{{.ID}}/item" hx-target="#conversation-{{.ID}}" hx-swap="outerHTML">Cancel</button>
+    </div>
+  </form>
+</li>{{end}}

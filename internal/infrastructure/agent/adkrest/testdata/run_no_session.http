@@ -1,0 +1,11 @@
+HTTP/1.1 404 Not Found
+Access-Control-Allow-Headers: Content-Type, Authorization
+Access-Control-Allow-Methods: GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS
+Access-Control-Allow-Origin: http://localhost:8080
+Content-Type: text/plain; charset=utf-8
+Vary: Origin
+X-Content-Type-Options: nosniff
+Date: <date>
+Content-Length: 87
+
+failed to find the session: failed to get session: session not found: "does-not-exist"

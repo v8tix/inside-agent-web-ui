@@ -1,0 +1,4 @@
+SELECT id, seq, role, status FROM messages
+WHERE conversation_id = $1
+ORDER BY seq DESC
+LIMIT 1

@@ -1,0 +1,12 @@
+data: {"id":"fcd66518-cb7e-41b2-852d-4ab913cef91a","invocationId":"e-787c18d6-4bf6-4f49-a9b0-27ee80f78376","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"You "}]}}
+
+data: {"id":"40cdd2cd-ab56-45dd-a5ae-12bc0f3138e9","invocationId":"e-787c18d6-4bf6-4f49-a9b0-27ee80f78376","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"said: "}]}}
+
+data: {"id":"e80bf053-1a9f-4551-b300-381a87855fc6","invocationId":"e-787c18d6-4bf6-4f49-a9b0-27ee80f78376","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"hello "}]}}
+
+data: {"id":"5d7b65dd-1fbd-4a6e-befe-adaabc994c9b","invocationId":"e-787c18d6-4bf6-4f49-a9b0-27ee80f78376","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"brave "}]}}
+
+data: {"id":"c9fed9f0-e3c1-441c-ab53-2abe97567e3a","invocationId":"e-787c18d6-4bf6-4f49-a9b0-27ee80f78376","author":"ui_agent","partial":true,"groundingMetadata":null,"usageMetadata":null,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"world"}]}}
+
+data: {"id":"cfae6f68-0a4c-45d6-b000-3a3aa1a32aa0","invocationId":"e-787c18d6-4bf6-4f49-a9b0-27ee80f78376","author":"ui_agent","groundingMetadata":null,"usageMetadata":{"candidatesTokenCount":5,"promptTokenCount":3,"totalTokenCount":8},"turnComplete":true,"actions":{"stateDelta":{},"artifactDelta":{}},"nodeInfo":{"path":"ui_agent"},"content":{"role":"model","parts":[{"text":"You said: hello brave world"}]}}
+

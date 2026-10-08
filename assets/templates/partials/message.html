@@ -1,0 +1,19 @@
+{{define "partial:message"}}{{if eq .Role "user"}}{{template "partial:user" .}}{{else}}{{template "partial:reply" .}}{{end}}{{end}}
+
+{{/* A user's message: plain text, escaped; line breaks are kept by CSS. */}}
+{{define "partial:user"}}<article class="message message-user" data-testid="message" data-role="user" data-id="{{.ID}}" data-status="complete">
+  <div class="message-body" data-testid="message-body">{{.Text}}</div>
+</article>{{end}}
+
+{{/*
+  An assistant reply. While it is unfinished, the wrapper opens the event
+  stream; each update swaps the wrapper's content with a fresh article.
+*/}}
+{{define "partial:reply"}}<div class="reply"{{if .Streaming}} sse-connect="/c/{{.ConversationID}}/m/{{.ID}}/stream" sse-swap="delta" sse-close="done" data-stop-url="/c/{{.ConversationID}}/m/{{.ID}}/stop"{{end}}>{{template "partial:assistant" .}}</div>{{end}}
+
+{{define "partial:assistant"}}<article class="message message-assistant" data-testid="message" data-role="assistant" data-id="{{.ID}}" data-status="{{.Status}}"{{if .TTFTMs}} data-ttft-ms="{{.TTFTMs}}"{{end}}{{if .DurationMs}} data-duration-ms="{{.DurationMs}}"{{end}}{{if .PromptTokens}} data-prompt-tokens="{{.PromptTokens}}"{{end}}{{if .CompletionTokens}} data-completion-tokens="{{.CompletionTokens}}"{{end}}{{if .ToolCalls}} data-tool-calls="{{.ToolCalls}}"{{end}}>
+  <div class="message-body" data-testid="message-body">{{if .Body}}{{.Body}}{{else if .Streaming}}<span class="typing" aria-hidden="true">…</span>{{end}}</div>
+  {{if eq .Status "stopped"}}<div class="text-body-secondary small mt-1" data-testid="stopped-note">Stopped</div>{{end}}
+  {{if .Error}}<div class="alert alert-warning mt-2 mb-0" role="alert" data-testid="error">{{.Error}}</div>{{end}}
+  {{if or .Actions .Copy}}{{template "partial:message_actions" .}}{{end}}
+</article>{{end}}

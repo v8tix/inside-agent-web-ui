@@ -1,0 +1,3 @@
+event: error
+data: {"error":"scripted failure requested with #error"}
+

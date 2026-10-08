@@ -1,0 +1,13 @@
+{{/*
+  One conversation in the sidebar. The row is the unit the page and the
+  evaluator work with: data-testid="conversation" and data-id sit on it.
+*/}}
+{{define "partial:conversation_item"}}<li class="conversation-item{{if .Active}} active{{end}}" id="conversation-{{.ID}}" data-testid="conversation" data-id="{{.ID}}">
+  <a href="/c/{{.ID}}" class="conversation-link" data-testid="conversation-link"{{if .Active}} aria-current="page"{{end}}>{{.Title}}</a>
+  <div class="conversation-actions">
+    <button type="button" class="btn btn-sm conversation-action" data-testid="rename" aria-label="Rename conversation {{.Title}}"
+            hx-get="/c/{{.ID}}/rename" hx-target="#conversation-{{.ID}}" hx-swap="outerHTML">{{template "icon:pencil"}}</button>
+    <button type="button" class="btn btn-sm conversation-action" data-testid="delete" aria-label="Delete conversation {{.Title}}"
+            hx-get="/c/{{.ID}}/delete" hx-target="#modal-root" hx-swap="innerHTML">{{template "icon:trash"}}</button>
+  </div>
+</li>{{end}}

@@ -1,0 +1,319 @@
+/* Application styles. Keep them external: the CSP forbids inline styles. */
+
+:root {
+  --app-sidebar-width: 18rem;
+}
+
+body {
+  min-height: 100vh;
+}
+
+/*
+  The chat page fills the window: the header takes the height it needs and the
+  chat takes the rest, so the composer stays on screen whatever the header does
+  on a small display. Only the message list scrolls.
+*/
+body.app-fixed {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+.chat-layout {
+  display: flex;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+/*
+  The sidebar is Bootstrap's offcanvas-lg: it slides in below the lg breakpoint
+  and is a plain column from lg up. At lg Bootstrap makes its body a flex row
+  with no padding and its background transparent, so those are set again here.
+*/
+.sidebar {
+  --bs-offcanvas-width: min(var(--app-sidebar-width), 85vw);
+
+  flex: 0 0 var(--app-sidebar-width);
+  background: var(--bs-tertiary-bg);
+}
+
+.sidebar .sidebar-body {
+  display: block;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+@media (min-width: 992px) {
+  .sidebar {
+    overflow-y: auto;
+    border-right: 1px solid var(--bs-border-color);
+    background: var(--bs-tertiary-bg) !important;
+  }
+
+  .sidebar .sidebar-body {
+    overflow-y: visible;
+  }
+}
+
+/* A conversation in the sidebar: the link, and rename/delete when the row is hovered or focused. */
+.conversation-item {
+  display: flex;
+  align-items: center;
+  border-radius: var(--bs-border-radius);
+}
+
+.conversation-item:hover,
+.conversation-item:focus-within,
+.conversation-item.active {
+  background: var(--bs-secondary-bg);
+}
+
+.conversation-link {
+  display: block;
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 0.5rem 0.75rem;
+  overflow: hidden;
+  color: var(--bs-body-color);
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.conversation-actions {
+  display: flex;
+  flex: 0 0 auto;
+  padding-right: 0.25rem;
+  opacity: 0;
+}
+
+.conversation-item:hover .conversation-actions,
+.conversation-item:focus-within .conversation-actions,
+.conversation-item.active .conversation-actions {
+  opacity: 1;
+}
+
+@media (hover: none) {
+  .conversation-actions {
+    opacity: 1;
+  }
+}
+
+/*
+ * Bootstrap keeps the light theme's #6c757d for the text of an outline button in
+ * the dark theme too, and on the sidebar's editing row. That is under 4.5 to 1
+ * there. The theme's own secondary text color is set for the background of its
+ * theme, so the buttons read in both. Hover and active keep Bootstrap's fill.
+ */
+.btn-outline-secondary {
+  --bs-btn-color: var(--bs-secondary-color);
+}
+
+.conversation-action {
+  padding: 0.25rem 0.4rem;
+  color: var(--bs-secondary-color);
+}
+
+.conversation-action:hover {
+  color: var(--bs-body-color);
+}
+
+.conversation-item.editing {
+  display: block;
+  padding: 0.25rem;
+  background: var(--bs-secondary-bg);
+}
+
+.rename-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.chat-column {
+  position: relative;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.messages {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding: 1.5rem 1rem;
+}
+
+.empty-state {
+  margin-top: 20vh;
+}
+
+.message {
+  max-width: 48rem;
+  margin: 0 auto 1.25rem;
+}
+
+.message-user .message-body {
+  margin-left: auto;
+  padding: 0.6rem 0.9rem;
+  border-radius: 1rem;
+  background: var(--bs-primary-bg-subtle);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.message-assistant .message-body {
+  overflow-wrap: anywhere;
+}
+
+.message-assistant .message-body > :last-child {
+  margin-bottom: 0;
+}
+
+/* Rendered Markdown. The sanitizer keeps plain tags, so style them here. */
+.message-assistant .message-body table {
+  display: block;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  overflow-x: auto;
+  border-collapse: collapse;
+}
+
+.message-assistant .message-body th,
+.message-assistant .message-body td {
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--bs-border-color);
+}
+
+.message-assistant .message-body th {
+  background: var(--bs-tertiary-bg);
+}
+
+.message-assistant .message-body pre {
+  padding: 0.75rem 1rem;
+  overflow-x: auto;
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius);
+  background: var(--bs-tertiary-bg);
+}
+
+.message-assistant .message-body pre code {
+  padding: 0;
+  color: inherit;
+  font-size: 0.875em;
+}
+
+.message-assistant .message-body blockquote {
+  padding-left: 1rem;
+  border-left: 0.25rem solid var(--bs-border-color);
+  color: var(--bs-secondary-color);
+}
+
+/* Actions on a finished reply. Once a newer reply exists, they go away. */
+.message-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.reply:not(:last-child) .latest-only {
+  display: none;
+}
+
+.typing {
+  color: var(--bs-secondary-color);
+}
+
+/* The composer and the "Jump to latest" button that floats just above it. */
+.composer-dock {
+  position: relative;
+}
+
+.jump-latest {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  z-index: 5;
+  margin-bottom: 0.25rem;
+  transform: translateX(-50%);
+  box-shadow: var(--bs-box-shadow-sm);
+}
+
+.composer {
+  max-width: 48rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0.75rem 1rem 1rem;
+}
+
+.composer-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-end;
+}
+
+.composer textarea {
+  resize: none;
+  max-height: 12rem;
+}
+
+
+/* Code blocks (div.code-block from the server) get a copy button (see app.js). */
+.code-block {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.message-assistant .message-body .code-block pre {
+  margin-bottom: 0;
+}
+
+.copy-code {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.4rem;
+  background: var(--bs-body-bg);
+  opacity: 0;
+}
+
+.code-block:hover .copy-code,
+.copy-code:focus-visible {
+  opacity: 1;
+}
+
+@media (hover: none) {
+  .copy-code {
+    opacity: 1;
+  }
+}
+
+/* The theme button shows the current choice: auto, light or dark. */
+.theme-icon {
+  display: none;
+}
+
+html[data-theme-mode="auto"] .theme-icon-auto,
+html[data-theme-mode="light"] .theme-icon-light,
+html[data-theme-mode="dark"] .theme-icon-dark {
+  display: inline-block;
+}
+
+/* Keyboard focus is always visible, also where Bootstrap draws none (a plain .btn has no ring). */
+.conversation-link:focus-visible,
+.conversation-action:focus-visible {
+  outline: 2px solid var(--bs-primary);
+  outline-offset: -2px;
+}
+
+main:focus {
+  outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+  }
+}

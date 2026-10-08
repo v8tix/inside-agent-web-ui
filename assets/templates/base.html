@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="htmx-config" content='{"allowEval":false,"allowScriptTags":false,"includeIndicatorStyles":false,"historyCacheSize":0,"defaultSettleDelay":0,"timeout":30000,"attributesToSettle":["class","width","height"],"responseHandling":[{"code":"204","swap":false},{"code":"[23]..","swap":true},{"code":"409|422|429","swap":true},{"code":"[45]..","swap":false,"error":true},{"code":"...","swap":true}]}'>
+  <title>{{template "page:title" .}} · Agent Web UI</title>
+  <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/vendor/bootstrap-5.3.8/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/css/app.css">
+  <link rel="stylesheet" href="/static/css/chroma.css">
+  <script src="/static/js/theme-init.js"></script>
+  <script src="/static/vendor/htmx-2.0.11/htmx.min.js" defer></script>
+  <script src="/static/vendor/htmx-ext-sse-2.2.4/sse.min.js" defer></script>
+  <script src="/static/vendor/bootstrap-5.3.8/bootstrap.bundle.min.js" defer></script>
+  <script src="/static/js/app.js" defer></script>
+</head>
+<body data-ui-contract="1" class="{{block "page:bodyclass" .}}{{end}}" hx-ext="sse">
+  {{block "page:skiplinks" .}}<a class="visually-hidden-focusable" href="#main">Skip to content</a>{{end}}
+  {{template "partial:header" .}}
+  {{block "page:wrap" .}}<main id="main" class="container py-4" tabindex="-1">
+    {{template "page:main" .}}
+  </main>{{end}}
+  <div id="modal-root"></div>
+  <div id="live-status" class="visually-hidden" role="status" aria-live="polite" data-testid="live-status"></div>
+</body>
+</html>
