@@ -50,7 +50,8 @@ open http://localhost:8300            # sign in with ADMIN_EMAIL / ADMIN_PASSWOR
 docker compose --profile full down    # stop it (add -v to delete the database)
 ```
 
-Or `make full/up` and `make full/down` — see [Makefile](#makefile).
+Or `make full/up` and `make full/down` (`make full/down ARGS=-v` to also delete
+the database) — see [Makefile](#makefile).
 
 Want to run the web server from source instead of Docker? Start just the other
 two services (`docker compose up -d --wait`, or `make up`) and run
