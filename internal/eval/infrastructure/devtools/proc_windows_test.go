@@ -16,9 +16,12 @@ import (
 )
 
 // A server starts Chrome, and ending it must end the process, the same way
-// killTree is asked to for the group a Unix process starts.
+// killTree is asked to for the group a Unix process starts. ping, not
+// timeout: timeout refuses to run at all without a real console ("Input
+// redirection is not supported"), which a child process started this way
+// never has.
 func TestKillTree_EndsTheProcess(t *testing.T) {
-	cmd := exec.Command("cmd", "/c", "timeout", "/t", "300")
+	cmd := exec.Command("cmd", "/c", "ping", "-n", "300", "127.0.0.1")
 	devtools.Isolate(cmd)
 	require.NoError(t, cmd.Start())
 	require.True(t, processAlive(t, cmd.Process.Pid))
