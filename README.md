@@ -497,6 +497,7 @@ assets               templates, static files (HTMX, Bootstrap vendored)
 it                   integration tests
 scripts              init-env, run, stop, eval, check, real-agent, build-tools, pr-check
 sketches             small, standard-library-only reference implementations (see sketches/README.md)
+docs                 spec.md, design-patterns.md, anki/review.csv (the companion book's recall deck)
 .github              CI workflow, pull request form
 ```
 
