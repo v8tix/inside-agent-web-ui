@@ -3,6 +3,7 @@
 package devtools_test
 
 import (
+	"encoding/csv"
 	"os/exec"
 	"strconv"
 	"strings"
@@ -36,12 +37,22 @@ func TestKillTree_NothingToKill(t *testing.T) {
 // --- a real process ---------------------------------------------------------------
 
 // processAlive asks tasklist, which knows about every process on the
-// machine, not just this test's children.
+// machine, not just this test's children. Its CSV output quotes every field
+// (including MemUsage, which itself contains a comma, e.g. "1,234 K"), so the
+// PID column is read with encoding/csv rather than matched as a substring.
 func processAlive(t *testing.T, pid int) bool {
 	t.Helper()
 	out, err := exec.Command("tasklist", "/FO", "CSV", "/NH", "/FI", "PID eq "+strconv.Itoa(pid)).Output()
 	require.NoError(t, err)
-	return strings.Contains(string(out), ","+strconv.Itoa(pid)+",")
+	records, err := csv.NewReader(strings.NewReader(string(out))).ReadAll()
+	require.NoError(t, err)
+	want := strconv.Itoa(pid)
+	for _, rec := range records {
+		if len(rec) > 1 && rec[1] == want {
+			return true
+		}
+	}
+	return false
 }
 
 func waitGone(t *testing.T, pid int) {
