@@ -20,7 +20,7 @@ import (
 )
 
 // Image is the pinned PostgreSQL image. Keep it in step with docker-compose.yml.
-const Image = "postgres:17.11"
+const Image = "postgres:18.6"
 
 var (
 	once     sync.Once
