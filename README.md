@@ -4,7 +4,26 @@
 [![Go](https://img.shields.io/badge/Go-1.27%2B-00ADD8?logo=go&logoColor=white)](https://go.dev/dl/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-A ChatGPT-style web UI for any agent that speaks the ADK REST API, plus
+<table>
+<tr>
+<td valign="top">
+
+This repository is the companion code for **Inside the Agent Web UI: Patterns
+for AI Agent Web Applications in Go**, by Marco Almeida — the hexagonal
+architecture, the streaming chat flow and the GAIA-driven evaluator below are
+walked through chapter by chapter. Grab a copy: [Kindle](https://www.amazon.com/dp/B0HP772X19) ·
+[Paperback](https://www.amazon.com/dp/B0HP7BPX7Y).
+
+</td>
+<td width="180" valign="top">
+
+<a href="https://www.amazon.com/dp/B0HP7BPX7Y"><img src=".github/assets/cover.jpg" alt="Inside the Agent Web UI — Patterns for AI Agent Web Applications in Go, by Marco Almeida" width="160"></a>
+
+</td>
+</tr>
+</table>
+
+A web UI for any agent that speaks the ADK REST API, plus
 **agent-eval** — a second program that drives that UI in a real browser just like
 a person would, asks it GAIA problems, and scores both the agent's answers and the
 UI itself. The binaries keep their original names, `agent-web-ui` and `agent-eval`.
@@ -33,6 +52,7 @@ The scripts are bash, so you'll need macOS or Linux (Windows works through WSL).
 | [Node.js](https://nodejs.org/) (for `npx`) | 20.19+, 22.12+ or 23+ | `agent-eval`'s browser tests; older fails at once, naming the Node it found |
 | Chrome | any recent | `agent-eval`, headless |
 | `make` | any | the [Makefile](#makefile) targets below |
+| [Google AI Studio API key](https://aistudio.google.com/apikey) | — | optional — only for [chatting with a real model](#chat-with-a-real-model) |
 
 Once those are installed, `make install` takes care of the rest: it writes your
 `.env` file and builds this project's own copies of the quality tools it
@@ -99,14 +119,15 @@ To chat with a real model instead, run a real ADK agent and point the Web UI at
 it. `scripts/real-agent.sh` builds the `ui-agent` sample from `adk-training-go` (a
 sibling checkout) and runs it on Gemini — every message you send goes to Google
 with your key and counts against your quota. Gemini is the only model this script
-supports.
+supports; for any other model, run your own ADK REST agent and point the Web UI
+at it with `AGENT_BASE_URL`/`AGENT_APP_NAME` instead (see [Quick start](#quick-start)).
 
 Everything for this lives in `.env`, under the "Real agent" section (plus
 `AGENT_BASE_URL`) — you never need to type a variable before a command.
 `.env.example` explains each key.
 
-1. **Settings.** In `.env`: `GOOGLE_AI_STUDIO_API_KEY=...` (get one from Google AI
-   Studio — the script hands it to the agent and never prints it; without it, the
+1. **Settings.** In `.env`: `GOOGLE_AI_STUDIO_API_KEY=...` (get one from
+   [Google AI Studio](https://aistudio.google.com/apikey) — the script hands it to the agent and never prints it; without it, the
    agent falls back to its own `.env` and your environment), `GEMINI_MODEL`
    (defaults to `gemini-3.5-flash`; change it to any model name you want — nothing
    here enforces a particular one), `AGENT_BASE_URL=http://localhost:9094/api`
@@ -201,9 +222,6 @@ first:
 | `APP_LOG_LEVEL`, `APP_LOG_FORMAT` | `info`, `json` | Logging |
 | `GEMINI_MODEL`, `GOOGLE_AI_STUDIO_API_KEY` | `gemini-3.5-flash`, none | The Gemini model that `scripts/real-agent.sh` runs, and its key; set `GEMINI_MODEL` to any model name you want |
 | `AGENT_LIVE`, `EVAL_MEASURE` | `0`, `0` | Switch on the opt-in live and measurement tests |
-
-The full tables, with the reasoning behind each default, are in
-[`docs/spec.md`](docs/spec.md).
 
 ## Operating it
 
@@ -497,8 +515,8 @@ assets               templates, static files (HTMX, Bootstrap vendored)
 it                   integration tests
 scripts              init-env, run, stop, eval, check, real-agent, build-tools, pr-check
 sketches             small, standard-library-only reference implementations (see sketches/README.md)
-docs                 spec.md, design-patterns.md, anki/review.csv (the companion book's recall deck)
-.github              CI workflow, pull request form
+docs                 anki/review.csv (the companion book's recall deck)
+.github              CI workflow, pull request form, assets/cover.jpg (the book cover)
 ```
 
 Which package can import which is tested too (`internal/architecture`): a Web UI
@@ -514,16 +532,6 @@ The UI and the evaluator share one contract, `internal/contract`: stable
 `<body data-ui-contract>`. A test renders every page state and fails if a
 template change would break the evaluator, and the evaluator itself refuses to
 work with a page speaking a different version.
-
-## Documentation
-
-[`docs/spec.md`](docs/spec.md) is the specification as actually built —
-requirements, the streaming flow, every route and its answers, the data model,
-all configuration, the UI contract, the evaluator's checks and files, the tests,
-and the evidence behind each success criterion. [`CHANGELOG.md`](CHANGELOG.md)
-tracks what each release holds, and
-[`docs/design-patterns.md`](docs/design-patterns.md) covers which Gang of Four
-patterns the code uses, which ones it skips on purpose, and why.
 
 ## License
 

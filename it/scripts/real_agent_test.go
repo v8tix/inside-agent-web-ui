@@ -488,7 +488,7 @@ func TestRealAgent_RunsOnGeminiOnly(t *testing.T) {
 		assert.Contains(t, stdout, "Gemini", "the script says which model the agent runs on")
 	})
 	t.Run("the repository offers no other", func(t *testing.T) {
-		for _, name := range []string{"scripts/real-agent.sh", ".env.example", "README.md", "docs/spec.md"} {
+		for _, name := range []string{"scripts/real-agent.sh", ".env.example", "README.md"} {
 			text, err := os.ReadFile(filepath.Join("../..", name))
 			require.NoError(t, err)
 			for n, line := range strings.Split(strings.ToLower(string(text)), "\n") {
