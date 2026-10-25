@@ -2,7 +2,7 @@
 # agent-web-ui: the web server. Build from the repository root:
 #   docker build -t agent-web-ui .
 
-FROM golang:1.27.1-alpine AS build
+FROM golang:1.27.3-alpine AS build
 WORKDIR /src
 COPY go.mod go.sum ./
 RUN go mod download

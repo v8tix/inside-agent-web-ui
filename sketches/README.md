@@ -1,9 +1,8 @@
 # Sketches
 
-Small, self-contained reference implementations written for a book on this
-codebase's patterns. Each one shows how *any* Go web application could use a
-pattern — not just this one — so none of them import anything from the rest of
-this repository.
+Small, self-contained reference implementations of this codebase's patterns.
+Each one shows how *any* Go web application could use a pattern — not just
+this one — so none of them import anything from the rest of this repository.
 
 Every sketch follows the same shape:
 
